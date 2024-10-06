@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Drivers for WooCommerce | Stattic</title>
+
+    <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
+    <meta name="keywords" content="SSG, Static Site Generator">
+    <meta name="author" content="Robert">
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<header class="bg-background shadow">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    <li>
+                        <a href="/home-page/" class="text-primary hover:underline quicksand-700">Robert DeVore</a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a>
+                    </li>
+                
+                    <li>
+                        <a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">WordPress &amp; WooCommerce Plugins</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Robert DeVore</a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container max-w-2xl m-auto py-10 px-4">
+    
+<article class="prose dark:prose-dark max-w-none">
+    <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">Delivery Drivers for WooCommerce</h1>
+    <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">2018-09-14T15:44:01</span> &middot; <span class="author">Robert</span></p>
+    
+    <div class="stattic-content mb-12">
+        <p>Today I am happy to announce the release of my newest open source plugin, <a href="https://www.wordpress.org/plugins/delivery-drivers-for-woocommerce">Delivery Drivers for WooCommerce</a>.
+<img alt="Delivery Drivers for WooCommerce logo" src="/images/ddwc-logo.webp" />
+As you can probably guess by the name, it's a plugin for WooCommerce that adds functionality for businesses who offer delivery and would like greater control over the entire process.
+Part of the reason that I built this plugin is because of a client need via <a href="https://www.wpdispensary.com">WP Dispensary</a>, but I did not want to pigeonhole it as another <a href="https://www.wordpress.org/plugins/wp-dispensary">dispensary plugin</a>.
+Since there's many businesses that offer delivery beyond just the cannabis industry, I knew this plugin would be better built as it's own separate entity.
+And that's what this blog post is about - the release of the Delivery Drivers for WooCommerce plugin, and what you can expect when using it.</p>
+<h2>Delivery Businesses &amp; WooCommerce</h2>
+<p>We've all seen the rise of grocery delivery services - the tides are changing, and where we used to enjoy trips across town, consumers are now looking for ways to have things brought to us.
+And that's where delivery businesses in the food industry (hello, Pizza) come into play.
+Studies indicate that <a href="https://www.statista.com/topics/1986/food-delivery-industry-in-the-us/">10% of consumers</a> use food delivery services at least once a week, and that's just one service business that offers delivery.
+Restaurant and grocery stores not only offer delivery for their customers, but place orders and have items delivered to them on a weekly basis, too.
+So this same plugin can power the restaurant's online delivery management, and also power the restaurant's food vendors who deliver truck loads of fresh produce every week.
+And while upwards of $4B dollars was spent ordering food delivery in 2015, we cannot overlook the multi-billion dollar cannabis industry that offer delivery services and need an easy way to manage drivers and track orders.
+With industries this large, there's no reason for WooCommerce to not have a delivery driver system for businesses who need them.
+Since I couldn't find anything remotely useful available, I decided to build it myself.</p>
+<h2>How the plugin works</h2>
+<p>Now that we've covered some of the reasons behind building the plugin and the markets that it serves, let's jump into how it actually works!</p>
+<h3>Delivery Drivers WooCommerce Settings</h3>
+<p>First things first, once you've installed &amp; activated the plugin, you're going to want to head over to the Settings page.
+You can find the Delivery Drivers settings by going to <code>WooCommerce -&gt; Settings -&gt; Delivery Drivers</code>.
+<img alt="Delivery Drivers for WooCommerce Settings screenshot" src="/images/ddwc-screenshot-1.webp" />
+The settings page allows you to add your Google Maps API key which is required in order for the map to display on your driver's dashboard.
+You can also add your dispatch phone number, which then adds a contact button on the order page in your drivers dashboard.
+Adding this contact info lets your drivers easily connect to your dispatch center with any questions they have about the order.</p>
+<h3>Assigning a driver to each order</h3>
+<p>Once you've taken care of the settings page, it's time to start assigning a driver to your order.
+In your dashboard, go to <code>WooCommerce -&gt; Orders</code> and then edit any of your orders, which will bring up a screen like the image below.
+<img alt="Delivery Drivers for WooCommerce - Assign Driver to Order" src="/images/ddwc-screenshot-5-1024x318.webp" />click to enlarge
+In the <strong>Delivery Driver</strong> box on the right side of the screen, you'll see a list of every user in your website with the Driver role that you can choose from.
+Then, on the left side of the screen where the <strong>Status:</strong> is currently <code>Processing</code>, you can change the status to <code>Driver Assigned</code>.</p>
+<h2>Drivers Capabilities</h2>
+<p>Now that we've covered how the administrator of the website can work with the Delivery Drivers for WooCommerce plugin, let's see what capabilities are given to your drivers.</p>
+<h3>Views from the Driver dashboard</h3>
+<p>On the front end of your website, the plugin adds a new "Delivery Drivers" tab to the WooCommerce My Account page, as seen below.
+<img alt="Assigned Orders - Driver Dashboard - Delivery Drivers for WooCommerce" src="/images/ddwc-screenshot-3.webp" />
+When the driver clicks to view the Delivery Drivers page, they are given a table view of each order that's been assigned to them.
+These details include the order ID number, the date of the order, it's current status and the total cost for the order.
+The order ID links to a separate page for your driver to further manage the order.</p>
+<h3>Order status management by your drivers</h3>
+<p>Once your driver clicks the ID number they'd like to view order details for, they are displayed with another page, like in the screenshot below.
+<img alt="Driver Dashboard Order Edit - Delivery Drivers for WooCommerce" src="/images/ddwc-screenshot-4.webp" />
+This page shows basic order details, along with a list of items in the order, the delivery address and Google map of the location, plus order status management.</p>
+<h3>Order Status management</h3>
+<p>Under the map is where your driver can change the order status. The default option is to change the order status from <code>Driver Assigned</code> to <code>Out for Delivery</code>.
+Once they've clicked the button to mark the order as <code>Out for Delivery</code>, the status option changes to allow the driver to mark the order as <code>Complete</code> after they've made the delivery.
+The goal is to give your driver the ability to manage the order status themselves and free up your time to spend it elsewhere on the business - or hell, maybe even take some time off ?</p>
+<h2>Delivery Drivers for WooCommerce PRO</h2>
+<p>I'm happy to announce that you can get the Pro version of the Delivery Drivers for WooCommerce plugin from <a href="https://www.deviodigital.com/">Devio Digital</a>.
+The Pro features include:
+  * Auto-assign drivers when an order is submitted
+  * Accept driver applications from the Driver Dashboard
+  * Email driver when they've been assigned a new order
+  * Email customer when the driver marks an order as "Out for Delivery"
+  * Email administrator when the driver marks an order as "Completed"</p>
+<p><a href="https://deviodigital.com/product/delivery-drivers-for-woocommerce-pro/">View DDWC Pro →</a>
+<img alt="" src="/images/banner-772x250.webp" /></p>
+<h2>Download the Delivery Drivers for WooCommerce Plugin</h2>
+<p>You can download the <a href="https://www.wordpress.org/plugins/delivery-drivers-for-woocommerce">Delivery Drivers for WooCommerce</a> plugin from the official WordPress plugin directory, or by searching for "<strong>Delivery Drivers</strong> " in the WordPress dashboard under <code>Plugins -&gt; Add New</code>.</p>
+    </div>
+</article>
+
+</main>
+
+<footer class="bg-background border-t border-primary mt-10 py-6">
+    <div class="container max-w-screen-xl m-auto px-4 text-center">
+        <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold">Stattic</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

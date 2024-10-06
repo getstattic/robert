@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improve CLS scores by dynamically setting image width and height | Stattic</title>
+
+    <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
+    <meta name="keywords" content="SSG, Static Site Generator">
+    <meta name="author" content="Robert">
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<header class="bg-background shadow">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    <li>
+                        <a href="/home-page/" class="text-primary hover:underline quicksand-700">Robert DeVore</a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a>
+                    </li>
+                
+                    <li>
+                        <a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">WordPress &amp; WooCommerce Plugins</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Robert DeVore</a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container max-w-2xl m-auto py-10 px-4">
+    
+<article class="prose dark:prose-dark max-w-none">
+    <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">Improve CLS scores by dynamically setting image width and height</h1>
+    <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">2023-10-23T09:06:29</span> &middot; <span class="author">Robert</span></p>
+    
+    <div class="stattic-content mb-12">
+        <p>While working on WordPress performance optimization for myself and for my clients, I&#8217;ve come across an issue that repeatedly affected CLS scores in a negative way.</p>
+
+<p>Luckily for myself (and now you, too), I created a fix that has helped reduced CLS when rouge images without explicit width and height attributes are the offenders.</p>
+
+<p>For instance, I applied this fix to a few images on a website recently and took the CLS score from 0.07 to 0.00 🔥</p>
+
+<figure class="wp-block-image aligncenter size-large is-resized"><img loading="lazy" decoding="async" width="1024" height="425" src="https://robertdevore.com/wp-content/uploads/2023/10/cls-scores-gtmetrix-example-1024x425.jpg" alt="" class="wp-image-9701" style="width:641px;height:auto" srcset="https://robertdevore.com/wp-content/uploads/2023/10/cls-scores-gtmetrix-example-1024x425.jpg 1024w, https://robertdevore.com/wp-content/uploads/2023/10/cls-scores-gtmetrix-example-300x125.jpg 300w, https://robertdevore.com/wp-content/uploads/2023/10/cls-scores-gtmetrix-example-768x319.jpg 768w, https://robertdevore.com/wp-content/uploads/2023/10/cls-scores-gtmetrix-example-1536x638.jpg 1536w, https://robertdevore.com/wp-content/uploads/2023/10/cls-scores-gtmetrix-example.jpg 1988w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">GTMetrix score history &#8211; CLS is the green line 👀</figcaption></figure>
+
+<h3 class="wp-block-heading">What&#8217;s CLS, Anyway?</h3>
+
+<p>For those who aren&#8217;t sure what CLS is, it&#8217;s one of Google&#8217;s <a href="https://support.google.com/webmasters/answer/9205520?hl=en" target="_blank" rel="noreferrer noopener">Core Web Vitals</a> metrics, and measures the visual stability of your web page. </p>
+
+<p>CLS, or Cumulative Layout Shift, is a web performance metric that evaluates how much content on a page shifts during loading.</p>
+
+<p>It measures the visual stability of a webpage, and a low CLS score is essential for a great user experience.</p>
+
+<p>A poor CLS score means a frustrating user experience and a less than favorable view in the eyes of Google &#8211; which sucks when you&#8217;re dependent on search engines for website traffic.</p>
+
+<p>In this article, I&#8217;m going to share a way you can improve your WordPress website&#8217;s CLS scores by dynamically setting the missing image dimensions programatically.</p>
+
+<h2 class="wp-block-heading">The issue with your images</h2>
+
+<p>You know when you&#8217;re editing a WordPress site and come across a theme files with hardcoded <code>&lt;img&gt;</code> tags that only have the <strong>src</strong> but no <strong>width</strong> or <strong>height</strong> attributes?</p>
+
+<p>They look something like this:</p>
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>&lt;img src=&#8221;https://yourwebsite.com/wp-content/uploads/2023/10/media-image-name.webp&#8221; alt=&#8221;&#8221; /&gt;</p>
+</blockquote>
+
+<p>These images are what negatively affect your CLS scores, because there&#8217;s not an explict width and height added to the <code>&lt;img&gt;</code> tag.</p>
+
+<p>What this means is that for a flashing moment during page load the image isn&#8217;t the correct size, and it causes the layout of the page to shift as the full image loads.</p>
+
+<p>These code snippets will help fix that once and for all 💪</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="498" height="280" src="https://robertdevore.com/wp-content/uploads/2023/10/we-can-do-something-about-this-kyle-broflovski.gif" alt="" class="wp-image-9702"/></figure>
+
+<h2 class="wp-block-heading">Get media ID by image URL</h2>
+
+<p>The first step to making this all work is to take an image URL and retrieve the media ID from WordPress.</p>
+
+<p>Since we need the media ID to get the width and height attributes, we&#8217;ll need to make sure the URL of the media is actually in the media library first.</p>
+
+<p><strong>Example URL:</strong></p>
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>https://yourwebsite.com/wp-content/uploads/2023/10/media-file-name.webp</p>
+</blockquote>
+
+<p>The function that I&#8217;ve created for this will take the URL as an arg and performs and SQL query to find the media ID for the URL.</p>
+
+<script src="https://gist.github.com/robertdevore/67870195faab9e1799a36365661f6175.js"></script>
+
+<p>You can add this code to your theme <code>functions.php</code> file or in a custom plugin you&#8217;re building.</p>
+
+<h2 class="wp-block-heading">Get width and height by image ID</h2>
+
+<p>Now that we&#8217;ve got the media ID for our image, we can use that to get the width and height attributes that are stored in the WordPress database.</p>
+
+<p>We&#8217;re going to use <a href="https://developer.wordpress.org/reference/functions/wp_get_attachment_image_src/" target="_blank" rel="noreferrer noopener">wp_get_attachment_image_src</a> to pull in the media data, and then extract the width and height into a usable array.</p>
+
+<script src="https://gist.github.com/robertdevore/21c436a50c7f6a8148a6416bf93c376a.js"></script>
+
+<p>You can also add this code to your theme <code>functions.php</code> file or in a custom plugin you&#8217;re building.</p>
+
+<h2 class="wp-block-heading">Get the explicit width and height for HTML output</h2>
+
+<p>Once we&#8217;ve got the width and height for our image, we&#8217;ve got to take it and output the <code>width="" height=""</code> attributes to use within our <code>&lt;img&gt;</code> tags.</p>
+
+<p>We can do that with the following function which uses the above two functions to pass the image URL through and output the width and height into a string that&#8217;s usable in your HTML.</p>
+
+<script src="https://gist.github.com/robertdevore/335964fb9d85bf7a9ba8ca5bf00080c1.js"></script>
+
+<p>And just like the other snippets, you will add this code to your theme <code>functions.php</code> file or in a custom plugin you&#8217;re building.</p>
+
+<p>This function is the one you&#8217;ll be using throughout your project.</p>
+
+<h2 class="wp-block-heading">Bringing it all together</h2>
+
+<p>So we&#8217;ve got the media ID from the image URL, then we grab the width/height for the image from the media ID and output it into a string for HTML usage.</p>
+
+<p><em>But what do we actually need to do with it?</em></p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="498" height="498" src="https://robertdevore.com/wp-content/uploads/2023/10/its-very-simple-eric-cartman.gif" alt="" class="wp-image-9706"/></figure>
+
+<p><strong>Original image code</strong></p>
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>&lt;img src=&#8221;&lt;?php echo get_theme_mod( &#8216;logo&#8217; ); ?&gt;&#8221; alt=&#8221;&lt;?php bloginfo( &#8216;name&#8217; ); ?&gt;&#8221; /&gt;</p>
+</blockquote>
+
+<p><strong>Updated image code</strong></p>
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>&lt;img src=&#8221;&lt;?php echo get_theme_mod( &#8216;logo&#8217; ); ?&gt;&#8221; <strong>&lt;?php echo get_explicit_image_sizes( get_theme_mod( &#8216;logo&#8217; ) ); ?&gt;</strong> alt=&#8221;&lt;?php bloginfo( &#8216;name&#8217; ); ?&gt;&#8221; /&gt;</p>
+</blockquote>
+
+<p>And here&#8217;s how the img HTML actually gets output into the page source:</p>
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>&lt;img src=&#8221;https://mywebsite.com/wp-content/uploads/2023/10/logo.webp&#8221; width=&#8221;600&#8243; height=&#8221;120&#8243; alt=&#8221;Blog name&#8221; /&gt;</p>
+</blockquote>
+
+<p>See, I told you &#8230; simple 😎</p>
+
+<h2 class="wp-block-heading">What do you think?</h2>
+
+<p>Were you aware of a method like this for adding the missing image width and height attributes in WordPress?</p>
+
+<p>Or do you know of a different way to accomplish this that&#8217;s more performance friendly? </p>
+
+<p>Maybe this is new to you and you&#8217;re about to go try it out on a website right now?</p>
+
+<p>Feel free to leave a comment, <a href="https://twitter.com/deviorobert" target="_blank" rel="noreferrer noopener">tweet me</a> about it, <a href="https://robertdevore.com/contact/">send an email</a> or shout from the rooftops 🤘</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="498" height="498" src="https://robertdevore.com/wp-content/uploads/2023/10/go-on-git-randy-marsh.gif" alt="" class="wp-image-9707"/></figure>
+    </div>
+</article>
+
+</main>
+
+<footer class="bg-background border-t border-primary mt-10 py-6">
+    <div class="container max-w-screen-xl m-auto px-4 text-center">
+        <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold">Stattic</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Featured Images Programmatically in WordPress | Stattic</title>
+
+    <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
+    <meta name="keywords" content="SSG, Static Site Generator">
+    <meta name="author" content="Robert">
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<header class="bg-background shadow">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    <li>
+                        <a href="/home-page/" class="text-primary hover:underline quicksand-700">Robert DeVore</a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a>
+                    </li>
+                
+                    <li>
+                        <a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">WordPress &amp; WooCommerce Plugins</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Robert DeVore</a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container max-w-2xl m-auto py-10 px-4">
+    
+<article class="prose dark:prose-dark max-w-none">
+    <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">Set Featured Images Programmatically in WordPress</h1>
+    <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">2018-04-03T08:12:16</span> &middot; <span class="author">Robert</span></p>
+    
+    <div class="stattic-content mb-12">
+        <p>Recently, I found myself needing to auto-set 300+ featured images for a customers <a href="https://www.woocommerce.com">WooCommerce</a> store.
+After the initial panic phased itself out, I took a couple of deep breathes and realized I've done a few kinda-sorta similar things with custom functions in the past.
+After a few hours of hacking the code up and reformatting it to fit my specific needs, I ended up with the plugin that automatically cycles through each WooCommerce product and does it's magic on plugin activation.
+<img alt="" src="/images/magic.webp" /></p>
+<h2>Why set featured images programmatically?</h2>
+<p>If you're working on a client website and there's only a couple of featured images you need to set, then it may be best to just manually set each featured image.
+But let's say your client has over 200 WooCommerce products that are all set up, except for the featured images.
+Let's say the client added images to each product, but placed them inside the content instead of setting a featured image.
+What direction would you take to handle this situation?
+The first option would be to add a featured imaged to each product manually.
+<img alt="" src="/images/fuck-that.webp" />Fuck that.
+Instead, the code below will cycle through all of your published WooCommerce products and get the first image that's attached to the product and make that image ID the featured image.</p>
+<h2>The Code</h2>
+<p>The function loops through all published WooCommerce products and checks if there's any media attached to the product.
+If it finds attached media, it will use that specific image's media ID for the product's featured image.
+If there's no media, it then checks to see if an image has been placed within <code>the_content</code> of the product.
+If it finds an image within <code>the_content</code>, it uses that image's media ID for the featured image.
+If no image is found in either, nothing is done.
+https://gist.github.com/robertdevore/9803c06086d27be2abbd540ad925cf62</p>
+<h2>Download the plugin from Github</h2>
+<p>I created a simple plugin that fires off this function on plugin activation.
+Download the beta version:
+<code>git clone https://github.com/robertdevore/woocommerce-set-featured-images</code>
+Don't want to get it from the command line?
+Download it from it's <a href="https://github.com/robertdevore/woocommerce-set-featured-images">Github repository</a>.
+<strong>Although this code works for me, I cannot guarantee that it will work for you.</strong><strong>Please remember to back up your website before use, just in case ?</strong></p>
+    </div>
+</article>
+
+</main>
+
+<footer class="bg-background border-t border-primary mt-10 py-6">
+    <div class="container max-w-screen-xl m-auto px-4 text-center">
+        <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold">Stattic</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slackedd | Stattic</title>
+
+    <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
+    <meta name="keywords" content="SSG, Static Site Generator">
+    <meta name="author" content="Robert">
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<header class="bg-background shadow">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    <li>
+                        <a href="/home-page/" class="text-primary hover:underline quicksand-700">Robert DeVore</a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a>
+                    </li>
+                
+                    <li>
+                        <a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">WordPress &amp; WooCommerce Plugins</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Robert DeVore</a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container max-w-2xl m-auto py-10 px-4">
+    
+<article class="prose dark:prose-dark max-w-none">
+    <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">Slackedd</h1>
+    <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">2016-02-01T14:37:20</span> &middot; <span class="author">Robert</span></p>
+    
+    <div class="stattic-content mb-12">
+        <p>Towards the end of last year, I <a href="https://twitter.com/deviorobert/status/674927533943582720">tweeted</a> that I was working on something with the Easy Digital Downloads payment success function, and today I am able to share the fruits of that labor.</p>
+<h2>Slackedd WordPress plugin</h2>
+<p>Receive notification through Slack when you make a sale with Easy Digital Downloads.
+<strong>Slackedd</strong> , once installed and configured, will send a notification to your Slack channel of choice every time you make a sale through your Easy Digital Downloads store.
+This plugin is the perfect solution if you spend a lot of time in Slack and would like to be notified when your digital products are being purchased. <strong>Slackedd</strong> lets your wish come true, without having to log into your WordPress dashboard.
+Take me to the download
+<img alt="slackedd-cover-image" src="/images/slackedd-cover-image.webp" />
+<strong>Slackedd is not allowed in the WordPress plugin repo</strong>
+I submitted <strong>Slackedd</strong> to the official WordPress plugin repo but received a notification email that you can no longer use trademarked names in your plugin name if you do not legally represent said company.
+I did however receive a great note from the reviewer. <em>Thank you, kind reviewer</em></p>
+<blockquote>
+<p>I am SO mad at the law!
+So… you're not Slack 🙁 Slackedd is the BEST FREAKING SLUG FOR THIS EVER.
+I can't let it in. Damn it! This is why we can't have cool things 🙁 The official rejection form is below and I am really annoyed I have to do this. This is one of the best names 🙁
+Well, that sucks 🙁</p>
+</blockquote>
+<h2>Automatic Updates from Github</h2>
+<p>If you would still like to use this plugin and receive update notifications, you can.
+With the help of the <a href="https://github.com/radishconcepts/WordPress-GitHub-Plugin-Updater">WordPress Github Plugin Updater</a> originally created by <a href="https://github.com/jkudish">Joey Kudish</a>, <strong>Slackedd</strong> will allow you to have automatic updates any time a new version of this plugin is released.
+Continue reading for install instructions.</p>
+<h2>Installation</h2>
+<p>Below are the steps to installing this plugin on your website.
+  1. Upload the <code>slackedd</code> folder to the <code>/wp-content/plugins/</code> directory or add it directly through your WordPress admin dashboard
+  2. Activate the plugin through the <code>Plugins</code> menu in WordPress
+  3. Go to <code>Downloads &gt; Extensions</code> and customize all of the settings in Slackedd (required in order for the plugin to work)</p>
+<h2>Screenshots</h2>
+<p>The first screenshot is the settings page where you can customize the <strong>Slackedd</strong> Bot, and the second screenshot is how the <strong>Slackedd</strong> Bot will look in your Slack channel.
+<img alt="slackedd-screenshot-2" src="/images/slackedd-screenshot-2-1024x531.webp" />
+<img alt="Slackedd Bot output in Slack" src="/images/slackedd-screenshot-1.webp" />Slackedd Bot output in Slack</p>
+<h2>Thank you's</h2>
+<p>First, this plugin wouldn't be possible without <a href="https://slack.com/">Slack</a> offering up an API that is easy to work with and highly documented.
+The same can be said about <a href="https://easydigitaldownloads.com">Easy Digital Downloads</a>. Your code is well documented and there's code examples and helpful people on Twitter which makes creating plugins like this easy, and fun.
+For the automatic updates code included in this plugin, I have to thank <a href="https://github.com/jkudish">Joey Kudish</a> for creating <a href="https://github.com/radishconcepts/WordPress-GitHub-Plugin-Updater">WordPress Github Plugin Updater</a> and <a href="http://www.radishconcepts.com/">Radish Concepts</a> for maintaining it.
+Finally, I would like to thank <a href="https://github.com/squizlabs">Squiz Labs</a> for <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a> and everyone involved with the <a href="https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards">WordPress Coding Standards</a> project, making it a breeze to check this plugins code against the WordPress Coding Standards.</p>
+<h2>Download</h2>
+<p>You can download the Slackedd WordPress plugin via <a href="https://github.com/deviodigital/Slackedd">Github</a>.</p>
+<h2>Contribute</h2>
+<p>Want to contribute to the plugin? Head over to the <a href="https://github.com/deviodigital/Slackedd">Github repository</a> and submit any issues you find or pull requests. Your contributions are both welcomed and appreciated.</p>
+    </div>
+</article>
+
+</main>
+
+<footer class="bg-background border-t border-primary mt-10 py-6">
+    <div class="container max-w-screen-xl m-auto px-4 text-center">
+        <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold">Stattic</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing the User Login Status Plugin for WordPress | Stattic</title>
+
+    <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
+    <meta name="keywords" content="SSG, Static Site Generator">
+    <meta name="author" content="Robert">
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<header class="bg-background shadow">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl font-bold quicksand-700"><a href="/" class="text-links">Stattic</a></h2>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    <li>
+                        <a href="/home-page/" class="text-primary hover:underline quicksand-700">Robert DeVore</a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a>
+                    </li>
+                
+                    <li>
+                        <a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a>
+                    </li>
+                
+                    <li>
+                        <a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">WordPress &amp; WooCommerce Plugins</a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/" class="text-primary hover:underline quicksand-700">About Robert DeVore</a>
+                    </li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container max-w-2xl m-auto py-10 px-4">
+    
+<article class="prose dark:prose-dark max-w-none">
+    <h1 class="text-6xl font-bold mb-4 text-links quicksand-700">Introducing the User Login Status Plugin for WordPress</h1>
+    <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">2024-09-29T06:16:08</span> &middot; <span class="author">Robert</span></p>
+    
+    <div class="stattic-content mb-12">
+        <p>Today I&#8217;m happy to announce the release of&nbsp;<strong>User Login Status</strong>, a WordPress plugin designed to help administrators easily monitor user activity and manage user sessions with ease.</p>
+
+<p>This plugin comes with a couple key features that allow you to quickly identify which users are logged in and take action by logging them out en-masse if needed.</p>
+
+<p>In this blog post, we&#8217;ll cover the plugin’s core functionality, technical details, and how to use it effectively on your site.</p>
+
+<h2 class="wp-block-heading">Key Features</h2>
+
+<h3 class="wp-block-heading">1.&nbsp;<strong>Monitor User Status Directly in the Admin Panel</strong></h3>
+
+<p>With&nbsp;<strong>User Login Status</strong>, you can view user login statuses directly from the&nbsp;<strong>Users</strong>&nbsp;table in the WordPress admin area:</p>
+
+<ul class="wp-block-list">
+<li><strong>Green Circle</strong>: Indicates the user is&nbsp;<strong>currently logged in</strong>.</li>
+
+
+
+<li><strong>Red Circle</strong>: Indicates the user is&nbsp;<strong>logged out</strong>&nbsp;or inactive.</li>
+</ul>
+
+<figure class="wp-block-image aligncenter size-large"><a href="https://robertdevore.com/wp-content/uploads/2024/09/user-login-status-users-screen.jpg"><img loading="lazy" decoding="async" width="1024" height="253" src="https://robertdevore.com/wp-content/uploads/2024/09/user-login-status-users-screen-1024x253.jpg" alt="User Login Status plugin screenshot" class="wp-image-12289" srcset="https://robertdevore.com/wp-content/uploads/2024/09/user-login-status-users-screen-1024x253.jpg 1024w, https://robertdevore.com/wp-content/uploads/2024/09/user-login-status-users-screen-300x74.jpg 300w, https://robertdevore.com/wp-content/uploads/2024/09/user-login-status-users-screen-768x190.jpg 768w, https://robertdevore.com/wp-content/uploads/2024/09/user-login-status-users-screen-1536x379.jpg 1536w, https://robertdevore.com/wp-content/uploads/2024/09/user-login-status-users-screen-2048x505.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></figure>
+
+<p>This visual indicator allows for quick and easy monitoring of user activity without navigating through logs or third-party tools.</p>
+
+<h3 class="wp-block-heading">2.&nbsp;<strong>Bulk Logout Functionality</strong></h3>
+
+<p>The plugin also provides a&nbsp;<strong>Bulk Action</strong>&nbsp;in the&nbsp;<strong>Users</strong>&nbsp;table, allowing administrators to log out multiple users at once.</p>
+
+<ul class="wp-block-list">
+<li>Select users from the list.</li>
+
+
+
+<li>Choose the&nbsp;<strong>Log Out Users</strong>&nbsp;option from the bulk actions dropdown.</li>
+
+
+
+<li>Users will be logged out immediately, and their session tokens cleared.</li>
+</ul>
+
+<h3 class="wp-block-heading">3.&nbsp;<strong>Real-Time AJAX Polling</strong></h3>
+
+<p>The plugin uses&nbsp;<strong>AJAX</strong>&nbsp;polling to check user statuses every 30 seconds, ensuring that the displayed statuses are as up-to-date as possible.</p>
+
+<p>This allows you to monitor real-time changes in user activity without needing to refresh the page.</p>
+
+<h3 class="wp-block-heading">4.&nbsp;<strong>Optimized for Admins</strong></h3>
+
+<ul class="wp-block-list">
+<li><strong>Permissions Check</strong>: Only users with the appropriate permissions (i.e., those who can manage users) will be able to use the bulk logout feature.</li>
+
+
+
+<li><strong>Responsive Design</strong>: The status indicators are optimized for both desktop and mobile views, ensuring administrators can manage user sessions from any device.</li>
+</ul>
+
+<h2 class="wp-block-heading">Installation and Usage</h2>
+
+<h3 class="wp-block-heading">1.&nbsp;<strong>Download and Install the Plugin</strong></h3>
+
+<ul class="wp-block-list">
+<li>Download the&nbsp;<strong>User Login Status</strong>&nbsp;plugin from the plugin’s <a href="https://github.com/robertdevore/user-login-status" target="_blank" rel="noreferrer noopener">GitHub page</a>.</li>
+
+
+
+<li>Install and activate the plugin via the&nbsp;<strong>Plugins</strong>&nbsp;section in the WordPress admin.</li>
+</ul>
+
+<h3 class="wp-block-heading">2.&nbsp;<strong>How to Monitor User Status</strong></h3>
+
+<p>Once the plugin is activated:</p>
+
+<ul class="wp-block-list">
+<li>Navigate to the&nbsp;<strong>Users</strong>&nbsp;section from the WordPress admin dashboard.</li>
+
+
+
+<li>Look for the&nbsp;<strong>Status</strong>&nbsp;column to view a green (logged in) or red (logged out) circle next to each user’s name.</li>
+</ul>
+
+<h3 class="wp-block-heading">3.&nbsp;<strong>How to Bulk Log Out Users</strong></h3>
+
+<ul class="wp-block-list">
+<li>Select the user(s) you want to log out by checking the box next to their name(s)</li>
+
+
+
+<li>In the bulk actions dropdown, select&nbsp;<strong>Log Out Users</strong>.</li>
+
+
+
+<li>Apply the action, and those users will be immediately logged out.</li>
+</ul>
+
+<h2 class="wp-block-heading">Technical Details</h2>
+
+<h3 class="wp-block-heading">1.&nbsp;<strong>Session Tokens</strong></h3>
+
+<p>The plugin relies on WordPress’s built-in&nbsp;<strong>session tokens</strong>&nbsp;to determine if a user is logged in or not. This is to ensure accuracy and compatibility with WordPress’s existing session management features.</p>
+
+<h3 class="wp-block-heading">2.&nbsp;<strong>AJAX Polling for Real-Time Status</strong></h3>
+
+<p>The plugin utilizes AJAX to update user statuses dynamically every 30 seconds. This keeps the admin interface in sync with real-time changes, ensuring that any user login or logout is reflected immediately.</p>
+
+<h3 class="wp-block-heading">3.&nbsp;<strong>Bulk Action Handling</strong></h3>
+
+<p>A new bulk action called&nbsp;<strong>Log Out Users</strong>&nbsp;is added to the users table. This action uses the&nbsp;<code>bulk_actions-users</code>&nbsp;filter to add a custom bulk action, and the&nbsp;<code>handle_bulk_actions-users</code>&nbsp;filter to process the logouts. </p>
+
+<p>This process makes sure that selected users are securely logged out, and their session tokens are cleared properly.</p>
+
+<h3 class="wp-block-heading">4.&nbsp;<strong>Security Considerations</strong></h3>
+
+<ul class="wp-block-list">
+<li><strong>Role-Based Access Control</strong>: Only administrators or users with the ability to manage other users can see and use the log out functionality.</li>
+
+
+
+<li><strong>Nonce and Permissions Check</strong>: AJAX requests to log out users are secured using nonces and user capability checks, ensuring that only authorized actions are processed.</li>
+</ul>
+
+<h2 class="wp-block-heading">Roadmap for Future Releases</h2>
+
+<p>I&#8217;m planning to add more features in the future, including:</p>
+
+<ul class="wp-block-list">
+<li><strong>Customizable Session Expiration</strong>: Allow administrators to set custom session expiration times.</li>
+
+
+
+<li><strong>User Notifications</strong>: Notify users when they are logged out by an admin.</li>
+
+
+
+<li><strong>Extended Filters and Sorting</strong>: More advanced options for filtering users based on their login status.</li>
+</ul>
+
+<h3 class="wp-block-heading">Download the User Login Status plugin</h3>
+
+<p>Get the&nbsp;<strong>User Login Status</strong>&nbsp;plugin today and start managing user sessions more effectively 🤘</p>
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/robertdevore/user-login-status" target="_blank" rel="noreferrer noopener">View on GitHub</a></div>
+    </div>
+</article>
+
+</main>
+
+<footer class="bg-background border-t border-primary mt-10 py-6">
+    <div class="container max-w-screen-xl m-auto px-4 text-center">
+        <p>Get <a href="https://stattic.site/" target="_blank" class="text-links font-bold">Stattic</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
