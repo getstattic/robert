@@ -1,12 +1,12 @@
 :root {
     --primary-color: #FACC15;
     --secondary-color: #EAB308;
-    --accent-color: #4F46E5;
+    --accent-color: #A8A29E;
     --border-color: #44403C;
     --background-color: #0C0A09;
     --text-color: #e7ede6;
     --text-secondary: #A8A29E;
-    --text-accent: #4F46E5;
+    --text-accent: #A8A29E;
 }
 
 .skip-link {
@@ -89,6 +89,22 @@
     margin-bottom: 1.5rem;
     font-weight: 400;
     color: var(--text-color);
+    color: #000;
+    text-decoration: none;
+    background: linear-gradient(to right,#000 30%,rgba(#dec330,0)),linear-gradient(to right,rgba(#dec330,0),#000 70%) 0 100%,radial-gradient(farthest-side at 0% 50%,rgba(#dec330,.5),rgba(#dec330,0)),radial-gradient(farthest-side at 100% 50%,rgba(#dec330,.5),rgba(#dec330,0)) 0 100%;
+    background-repeat: no-repeat;
+    background-size: 40px 100%,40px 100%,14px 100%,14px 100%;
+    background-position: 0 0,100%,0 0,100%;
+    background-attachment: local,local,scroll,scroll;
+    margin: 1rem 0 .25em 0;
+    text-shadow: .02em .02em 0 var(--primary-color),-.02em -.02em 0 var(--primary-color),-.02em .02em 0 var(--primary-color),.02em -.02em 0 var(--primary-color),0 .02em 0 var(--primary-color),0 -.02em 0 var(--primary-color),-.02em 0 0 var(--primary-color),.02em 0 0 var(--primary-color);
+    color: #000;
+    overflow: auto;
+    padding: 1.7rem 0 0 0;
+    font-size: 82px!important;
+    line-height: 1.3;
+    font-family: 'Varela Round',sans-serif;
+    margin-bottom: 0;
 }
 
 .stattic-content h1 {
@@ -117,7 +133,7 @@
 
 .stattic-content ul, 
 .stattic-content ol {
-    margin-left: 2rem; /* Indentation */
+    margin-left: 2rem;
     margin-bottom: 1.5rem;
     color: var(--text-color);
 }
