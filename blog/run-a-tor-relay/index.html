@@ -98,14 +98,14 @@
 <p>For those of you who don&#8217;t know, Digital Ocean is a SSD cloud server host that lets you <em>spin up</em> a droplet in 55 seconds.</p>
 <p>By using the following sign up link (my affiliate link), you get a <strong>$10 credit</strong>, which means you&#8217;ll be able to set up a server for your Tor relay without even having to come out of your pocket for the first two months.</p>
 <p><a href="http://robertdevore.com/recommends/digitalocean">Sign up to Digital Ocean</a></p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-34" src="http://robertdevore.com/wp-content/uploads/2015/08/digital-ocean-tor-relay-tutorial-1.jpg" alt="digital-ocean-tor-relay-tutorial-1" width="565" height="500" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-34" src="/images/digital-ocean-tor-relay-tutorial-1.webp" alt="digital-ocean-tor-relay-tutorial-1" width="565" height="500" /></p>
 <p>Getting your account set up is fairly straight forward.</p>
 <p>Create an account on their <a href="http://robertdevore.com/recommends/digitalocean" target="_blank" rel="nofollow">home page</a>, add your credit card information for billing, and you&#8217;re ready to start setting up your first droplet.</p>
-<p><figure id="attachment_35" aria-describedby="caption-attachment-35" style="width: 558px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-35" src="http://robertdevore.com/wp-content/uploads/2015/08/digital-ocean-tor-relay-tutorial-2.jpg" alt="The screen you see once your Digital Ocean account is set up" width="558" height="292" /><figcaption id="caption-attachment-35" class="wp-caption-text">The screen you see once your Digital Ocean account is set up</figcaption></figure></p>
+<p><figure id="attachment_35" aria-describedby="caption-attachment-35" style="width: 558px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-35" src="/images/digital-ocean-tor-relay-tutorial-2.webp" alt="The screen you see once your Digital Ocean account is set up" width="558" height="292" /><figcaption id="caption-attachment-35" class="wp-caption-text">The screen you see once your Digital Ocean account is set up</figcaption></figure></p>
 <h4>Creating your Droplet</h4>
 <p>Once you&#8217;ve signed up for Digital Ocean and have added in your billing information, you&#8217;ll now be creating your first Droplet. Don&#8217;t worry if you have never done something like this before, Digital Ocean makes the process a breeze.</p>
 <p>Once you click the Create Droplet button, you&#8217;ll be taken to a page where you need to add your Droplet name and select what kind of server you want to run.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-36" src="http://robertdevore.com/wp-content/uploads/2015/08/digital-ocean-tor-relay-tutorial-3.jpg" alt="digital-ocean-tor-relay-tutorial-3" width="811" height="581" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-36" src="/images/digital-ocean-tor-relay-tutorial-3.webp" alt="digital-ocean-tor-relay-tutorial-3" width="811" height="581" /></p>
 <ol>
 <li>You can name your Droplet whatever you&#8217;d like. For mine, I chose <code>FuckYeahTor</code>, but feel free to make yours something less vulgar 🙂</li>
 <li>Select the <strong>$5/month</strong> Droplet size.</li>
@@ -115,20 +115,20 @@
 <li>Wait for the Droplet creation to finish</li>
 </ol>
 <p>If you are now seeing a screen like the image below, congratulations! You&#8217;ve just set up your first Droplet using Digital Ocean.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-37" src="http://robertdevore.com/wp-content/uploads/2015/08/digital-ocean-tor-relay-tutorial-4.jpg" alt="digital-ocean-tor-relay-tutorial-4" width="998" height="492" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-37" src="/images/digital-ocean-tor-relay-tutorial-4.webp" alt="digital-ocean-tor-relay-tutorial-4" width="998" height="492" /></p>
 <h2>Setting up your Tor relay</h2>
 <p>Now that you&#8217;ve got your server set up, it&#8217;s time to start getting the Tor relay set up. Firs things first, click the <strong>Console Access</strong> button like in the screenshot above, or use your favorite SSH client, like <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">PuTTY</a>.</p>
 <p>This takes you to a screen with a black box that asks for your user/pass. This has been sent to you via email, so grab that and log in. Once you&#8217;re logged in, it requires that you change your password, and when you do that, you&#8217;re looking at a screen similar to the one below.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-38" src="http://robertdevore.com/wp-content/uploads/2015/08/digital-ocean-tor-relay-tutorial-5.jpg" alt="digital-ocean-tor-relay-tutorial-5" width="600" height="263" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-38" src="/images/digital-ocean-tor-relay-tutorial-5.webp" alt="digital-ocean-tor-relay-tutorial-5" width="600" height="263" /></p>
 <p>Next, we&#8217;ll be installing <a href="http://www.torproject.org/" target="_blank">Tor</a> &amp; <a href="http://www.torproject.org/projects/arm.html.en" target="_blank">Arm</a> onto our server. In your SSH client (or Console), type the following in:</p>
 <p><code>apt-get install tor tor-arm</code></p>
 <p>Hit ENTER on your keyboard and you&#8217;ll now see a bunch of stuff happening in your window. Let this run it&#8217;s course, until it asks you to type <strong>Y/N</strong> to continue. Type <strong>Y</strong> and hit ENTER on your keyboard.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-39" src="http://robertdevore.com/wp-content/uploads/2015/08/digital-ocean-tor-relay-tutorial-6.jpg" alt="digital-ocean-tor-relay-tutorial-6" width="642" height="256" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-39" src="/images/digital-ocean-tor-relay-tutorial-6.webp" alt="digital-ocean-tor-relay-tutorial-6" width="642" height="256" /></p>
 <p>Now well be editing the Tor config file in order to set up the proper settings for our Tor relay.</p>
 <p>In your SSH client, type the following:</p>
 <p><code>nano /etc/tor/torrc</code></p>
 <p>This will open the file in your console, which looks like the image below.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-41" src="http://robertdevore.com/wp-content/uploads/2015/08/digital-ocean-tor-relay-tutorial-7.jpg" alt="digital-ocean-tor-relay-tutorial-7" width="642" height="386" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-41" src="/images/digital-ocean-tor-relay-tutorial-7.webp" alt="digital-ocean-tor-relay-tutorial-7" width="642" height="386" /></p>
 <p>Now, we&#8217;ll be scrolling through the file content and editing the following options so they reflect the information below <em>(note: they&#8217;re all not together, I just published them this way for ease of reading)</em></p>
 <blockquote><p>ORPort 443<br />
 Exitpolicy reject *:*<br />
