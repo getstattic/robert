@@ -86,14 +86,14 @@
         <p>Recently, I found myself needing to auto-set 300+ featured images for a customers <a href="https://www.woocommerce.com" target="_blank" rel="noopener noreferrer">WooCommerce</a> store.</p>
 <p>After the initial panic phased itself out, I took a couple of deep breathes and realized I&#8217;ve done a few kinda-sorta similar things with custom functions in the past.</p>
 <p>After a few hours of hacking the code up and reformatting it to fit my specific needs, I ended up with the plugin that automatically cycles through each WooCommerce product and does it&#8217;s magic on plugin activation.</p>
-<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1169" src="http://robertdevore.com/wp-content/uploads/2018/04/magic.gif" alt="" width="275" height="252" /></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1169" src="/images/magic.webp" alt="" width="275" height="252" /></p>
 <h2>Why set featured images programmatically?</h2>
 <p>If you&#8217;re working on a client website and there&#8217;s only a couple of featured images you need to set, then it may be best to just manually set each featured image.</p>
 <p>But let&#8217;s say your client has over 200 WooCommerce products that are all set up, except for the featured images.</p>
 <p>Let&#8217;s say the client added images to each product, but placed them inside the content instead of setting a featured image.</p>
 <p>What direction would you take to handle this situation?</p>
 <p>The first option would be to add a featured imaged to each product manually.</p>
-<p><figure id="attachment_1163" aria-describedby="caption-attachment-1163" style="width: 282px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-1163 size-full" src="http://robertdevore.com/wp-content/uploads/2018/04/fuck-that.gif" alt="" width="282" height="257" /><figcaption id="caption-attachment-1163" class="wp-caption-text">Fuck that.</figcaption></figure></p>
+<p><figure id="attachment_1163" aria-describedby="caption-attachment-1163" style="width: 282px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-1163 size-full" src="/images/fuck-that.webp" alt="" width="282" height="257" /><figcaption id="caption-attachment-1163" class="wp-caption-text">Fuck that.</figcaption></figure></p>
 <p>Instead, the code below will cycle through all of your published WooCommerce products and get the first image that&#8217;s attached to the product and make that image ID the featured image.</p>
 <p></p>
 <h2>The Code</h2>
