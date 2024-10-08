@@ -84,6 +84,7 @@ strong {
     color: var(--text-color);
 }
 
+#main-content > h1,
 article > h1 {
     color: #000 !important;
     text-decoration: none;
