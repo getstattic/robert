@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to customize the style of your WordPress login screen | Stattic</title>
 
-    <meta name="description" content="Stattic is a fast, lightweight static site generator that optimizes images, supports custom fonts, and easily integrates with GitHub Pages for quick, SEO-friendly site deployment without the bloat of traditional CMS platforms like WordPress.">
-    <meta name="keywords" content="SSG, Static Site Generator">
-    <meta name="author" content="Robert">
+    
+        <title>How to customize the style of your WordPress login screen | Robert DeVore - Creative Thinker. Hustler. Web Developer Entrepreneur.</title>
+        <meta name="description" content="Robert is an opinionated developer who is building Stattic and CannaBiz Software, LLC.">
+        <meta name="keywords" content="SSG, Static Site Generator">
+        <meta name="author" content="Robert">
+    
 
     <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
     
@@ -32,29 +34,41 @@
         <nav>
             <ul class="flex space-x-6">
                 
+                    
                     <li>
                         <a href="/home-page/" class="text-primary hover:underline quicksand-700">Robert DeVore</a>
                     </li>
+                            
                 
+                    
                     <li>
                         <a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a>
                     </li>
+                            
                 
-                    <li>
-                        <a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a>
-                    </li>
-                
+                    
                     <li>
                         <a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a>
                     </li>
+                            
                 
+                    
                     <li>
                         <a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">WordPress &amp; WooCommerce Plugins</a>
                     </li>
+                            
                 
+                    
+                    <li>
+                        <a href="/wordpress-plugin-updates/" class="text-primary hover:underline quicksand-700">WordPress® Plugin Updates</a>
+                    </li>
+                            
+                
+                    
                     <li>
                         <a href="/about/" class="text-primary hover:underline quicksand-700">About Robert DeVore</a>
                     </li>
+                            
                 
             </ul>
         </nav>
@@ -98,7 +112,7 @@
 
 <p>We&#8217;ll be looking for this bit of code below.</p>
 
-<div class="snippetcpt-wrap" id="snippet-2753" data-id="2753" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=523cf1259b&#038;id=2753" data-fullscreen="https://robertdevore.com/code-snippets/wp-login-php-filter/?full-screen=1">
+<div class="snippetcpt-wrap" id="snippet-2753" data-id="2753" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2753" data-fullscreen="https://robertdevore.com/code-snippets/wp-login-php-filter/?full-screen=1">
                 <pre class="prettyprint linenums lang-php" title="wp-login.php filter">&lt;?php
   /**
  * Filters the link text of the header logo above the login form.
@@ -118,7 +132,7 @@ $login_header_text = apply_filters( 'login_headertext', $login_header_text );</p
 
 <p>These changes will go in your theme <strong>functions.php</strong> file (or a custom plugin).</p>
 
-<div class="snippetcpt-wrap" id="snippet-2754" data-id="2754" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=523cf1259b&#038;id=2754" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image/?full-screen=1">
+<div class="snippetcpt-wrap" id="snippet-2754" data-id="2754" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2754" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image/?full-screen=1">
                 <pre class="prettyprint linenums lang-php" title="acme_login_logo_image">&lt;?php
 /**
  * Custom login form logo link title.
@@ -141,7 +155,7 @@ add_filter( 'login_headertext', 'acme_login_logo_image' );
 
 <p>Next, we&#8217;re going to want to remove the default CSS styles that WordPress applies to the logo image so ours new logo fits properly within the space and re-sizes automatically depending on logo size.</p>
 
-<div class="snippetcpt-wrap" id="snippet-2755" data-id="2755" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=523cf1259b&#038;id=2755" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_styles/?full-screen=1">
+<div class="snippetcpt-wrap" id="snippet-2755" data-id="2755" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2755" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_styles/?full-screen=1">
                 <pre class="prettyprint linenums lang-php" title="acme_login_logo_image_styles">&lt;?php
 /**
  * Custom login form logo image styles.
@@ -184,7 +198,7 @@ add_action( 'login_enqueue_scripts', 'acme_login_logo_image_styles' );</pre>
 
 <p>Below is the updated filter code which replaces the first piece of code we added earlier in the article.</p>
 
-<div class="snippetcpt-wrap" id="snippet-2757" data-id="2757" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=523cf1259b&#038;id=2757" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_2/?full-screen=1">
+<div class="snippetcpt-wrap" id="snippet-2757" data-id="2757" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2757" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_2/?full-screen=1">
                 <pre class="prettyprint linenums lang-php" title="acme_login_logo_image_2">&lt;?php
 /**
  * Custom login form logo link title.
@@ -224,7 +238,7 @@ add_filter( 'login_headertext', 'acme_login_logo_image' );
 
 <p>You can change the <code>get_theme_mod</code> instances to match your color options names.</p>
 
-<div class="snippetcpt-wrap" id="snippet-2760" data-id="2760" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=523cf1259b&#038;id=2760" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_links/?full-screen=1">
+<div class="snippetcpt-wrap" id="snippet-2760" data-id="2760" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2760" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_links/?full-screen=1">
                 <pre class="prettyprint linenums lang-css" title="acme_login_logo_image_css_links">body.login a,
 body.login a:visited,
 body.login a:focus,
@@ -249,7 +263,7 @@ body.login h1 a:focus {
 
 <p>The CSS codes below make the button full width and adds the background color and text colors I have in the theme customizer.</p>
 
-<div class="snippetcpt-wrap" id="snippet-2761" data-id="2761" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=523cf1259b&#038;id=2761" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_button_links/?full-screen=1">
+<div class="snippetcpt-wrap" id="snippet-2761" data-id="2761" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2761" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_button_links/?full-screen=1">
                 <pre class="prettyprint linenums lang-css" title="acme_login_logo_image_css_button_links">body.login.wp-core-ui .button-primary {
     background-color: &lt;?php echo get_theme_mod( 'acme_button_color' ); ?&gt;;
     border-color: &lt;?php echo get_theme_mod( 'acme_button_color' ); ?&gt;;
@@ -277,7 +291,7 @@ body.login.wp-core-ui .button-primary:hover {
 
 <p>The code below uses the background color option added to the theme customizer.</p>
 
-<div class="snippetcpt-wrap" id="snippet-2762" data-id="2762" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=523cf1259b&#038;id=2762" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_background/?full-screen=1">
+<div class="snippetcpt-wrap" id="snippet-2762" data-id="2762" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2762" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_background/?full-screen=1">
                 <pre class="prettyprint linenums lang-css" title="acme_login_logo_image_css_background">body.login {
     background-color: #&lt;?php echo get_theme_mod( 'background_color' ); ?&gt;;
 }
