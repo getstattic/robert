@@ -267,6 +267,9 @@ article > h1 {
 
 figure.aligncenter img {
     margin: 0 auto;
+}
+
+figure.about-image img {
     border-radius: 150px;
 }
 
