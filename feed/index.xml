@@ -5,7 +5,7 @@
     <link>https://robert.stattic.site/</link>
     <description>Latest posts from robert.stattic.site</description>
     <atom:link href="https://robert.stattic.site/feed/index.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 08 Oct 2024 05:07:32 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2024 05:30:17 GMT</lastBuildDate>
     <language>en-us</language>
     
     <item>
@@ -14,7 +14,7 @@
     <description>Towards the end of last year, I tweeted that I was working on something with the Easy Digital Downloads payment success function, and today I am able to share the fruits of that labor. Slackedd WordPress plugin Receive notification through Slack when you make a sale with Easy Digital Downloads. Slackedd, once installed and configured, […]
 </description>
     <guid isPermaLink="false">22e6fbb2f6f91401dc21c34323e98668</guid>
-    <pubDate>Mon, 01 Feb 2016 14:37:20 +0000</pubDate>
+    <pubDate>Feb 01, 2016</pubDate>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
     <description>It's been nearly 7 years since I first released WP Dispensary ???? On November 26th, 2015 I published this article announcing to the world that I built the first cannabis menu plugin for WordPress. Needless to say, it was met with both good and bad responses ???? Some people knew where the industry was heading […]
 </description>
     <guid isPermaLink="false">0077f89925a15dc05667e9e56a734233</guid>
-    <pubDate>Sun, 14 Aug 2022 22:12:18 +0000</pubDate>
+    <pubDate>Aug 14, 2022</pubDate>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
     <description>I can't remember what sparked the idea, but I got bit by a strong urge to create my own cipher. Maybe it's all the spy shit I watch on TV ???? Regardless, I knew that there were a couple of things that I needed to figure out in order to build my own custom cipher […]
 </description>
     <guid isPermaLink="false">f5b02f924b0c1ed4db7d97455c6b8053</guid>
-    <pubDate>Mon, 28 Nov 2022 23:42:34 +0000</pubDate>
+    <pubDate>Nov 28, 2022</pubDate>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
     <description>It's amazing what you can come up with randomly over the weekend while doing a dozen other things ? Case in point - Chapters for Authors ? This is a new plugin I built from an idea I got when I read a tweet from Ines van Essen, who is building a plugin for bloggers to gamify […]
 </description>
     <guid isPermaLink="false">14260ea6c4ee10f26170728a5ed41c35</guid>
-    <pubDate>Tue, 27 Sep 2016 12:19:15 +0000</pubDate>
+    <pubDate>Sep 27, 2016</pubDate>
     </item>
     
     <item>
@@ -50,7 +50,7 @@
     <description>It's taken me three tries to sit here and begin writing this blog post. I've put so much of myself into my work these last six months that I am feeling something unique to me; pride in myself and my work. Over the last few years I've been living off of the income generated from […]
 </description>
     <guid isPermaLink="false">5ac5d72355e6078367c604f4bfb3cca9</guid>
-    <pubDate>Wed, 11 May 2016 13:29:02 +0000</pubDate>
+    <pubDate>May 11, 2016</pubDate>
     </item>
     
     <item>
@@ -59,7 +59,7 @@
     <description>I always thought Impostor Syndrome was bullshit. Then I realized I was 6 months in to running WP Dispensary full time and I had no idea what I was doing. Recently, I've been working on WPD v2.0 and have pushed myself to do things with code that I haven't before. This lead me to question […]
 </description>
     <guid isPermaLink="false">5bf9a71a29604cc69408e36f5120aec1</guid>
-    <pubDate>Mon, 16 Apr 2018 07:40:43 +0000</pubDate>
+    <pubDate>Apr 16, 2018</pubDate>
     </item>
     
     <item>
@@ -68,7 +68,7 @@
     <description>Notice: This post has been updated for 2018. Within the last few months we've seen medical and recreational marijuana laws pass in 8 out of 9 states. This means there is going to be an influx of websites being built for new businesses with WordPress in the upcoming years.
 </description>
     <guid isPermaLink="false">412f05b9d386776208fd2cbf2f69374d</guid>
-    <pubDate>Wed, 18 Jan 2017 17:49:30 +0000</pubDate>
+    <pubDate>Jan 18, 2017</pubDate>
     </item>
     
     <item>
@@ -77,7 +77,7 @@
     <description>Tor is an important tool for your privacy, security and freedom of speech. In an increasingly Orwellian world, Tor has become one of the most important tools, in my opinion, for you to be truly free online. I would like to start doing my part to help out with a project that I've personally used […]
 </description>
     <guid isPermaLink="false">6bcf0821e1c540809eaa9fd252d88627</guid>
-    <pubDate>Sat, 15 Aug 2015 13:31:36 +0000</pubDate>
+    <pubDate>Aug 15, 2015</pubDate>
     </item>
     
     <item>
@@ -86,7 +86,7 @@
     <description>I've been working on extending the WP Dispensary plugin and wanted to share some of the ways I've found to help boost the power of the Custom Post Types you create. Custom Post Types are a great building block for turning WordPress into more than a piece of blogging software. Going beyond the original Posts […]
 </description>
     <guid isPermaLink="false">7e31bb069650607dabfe32db54a68fc5</guid>
-    <pubDate>Mon, 26 Jun 2017 15:17:49 +0000</pubDate>
+    <pubDate>Jun 26, 2017</pubDate>
     </item>
     
     <item>
@@ -95,7 +95,7 @@
     <description>After building the WP Dispensary plugin and and add-on's like MMJMenu Sync, WooCommerce Connect, Inventory Management, &amp;amp; Locations it was time to work on a top shelf theme that brings the entire package together. Last Friday over at WP Dispensary, I released CannaBiz, a commercial WordPress theme for businesses in the cannabis industry.
 </description>
     <guid isPermaLink="false">0d3b246e9fecd93e508e705661f50866</guid>
-    <pubDate>Tue, 14 Jun 2016 07:31:08 +0000</pubDate>
+    <pubDate>Jun 14, 2016</pubDate>
     </item>
     
     <item>
@@ -104,7 +104,7 @@
     <description>Nature is mans best medicine, even when those who benefit off of sick people tell you otherwise. Within the marijuana plant there are two main properties, cannabidiol (CBD) — which works without the 'high' effect - and tetrahydrocannabinol (THC) - which is more known for its psychoactive properties. When it comes to the cannabis plant […]
 </description>
     <guid isPermaLink="false">ce5740fa9a72aceb1430b7c20bcfc89d</guid>
-    <pubDate>Wed, 20 Apr 2016 13:07:02 +0000</pubDate>
+    <pubDate>Apr 20, 2016</pubDate>
     </item>
     
     <item>
@@ -113,7 +113,7 @@
     <description>I will hold $1,000,000 in my hands. Bold statement, right? Well, if fortune favors the bold, I plan on cashing in on it. I understand that overnight success doesn't mean that tomorrow morning I'll wake up and be rich. I've been building websites for almost 2 decades. I've been releasing open source code for a […]
 </description>
     <guid isPermaLink="false">c90f3b53fa8c1dc605372020ca4e9055</guid>
-    <pubDate>Thu, 03 Nov 2016 09:43:40 +0000</pubDate>
+    <pubDate>Nov 03, 2016</pubDate>
     </item>
     
     <item>
@@ -122,7 +122,7 @@
     <description>Recently, I found myself needing to auto-set 300+ featured images for a customers WooCommerce store. After the initial panic phased itself out, I took a couple of deep breathes and realized I've done a few kinda-sorta similar things with custom functions in the past. After a few hours of hacking the code up and reformatting […]
 </description>
     <guid isPermaLink="false">89ebfe95964a407fbf0c194e453a4a14</guid>
-    <pubDate>Tue, 03 Apr 2018 08:12:16 +0000</pubDate>
+    <pubDate>Apr 03, 2018</pubDate>
     </item>
     
     <item>
@@ -131,7 +131,7 @@
     <description>One question I've been asking myself lately is, how productive can you really claim to be if you're not seeing results from your work? Being motivated is great, and finding yourself putting a lot of rubber to the road is even better, but it doesn't mean shit if you're not focused. I've been learning that […]
 </description>
     <guid isPermaLink="false">65767f0c3efa75039df8a8781f3108a1</guid>
-    <pubDate>Wed, 07 Oct 2015 19:09:02 +0000</pubDate>
+    <pubDate>Oct 07, 2015</pubDate>
     </item>
     
     <item>
@@ -140,7 +140,7 @@
     <description>While working on WordPress performance optimization for myself and for my clients, I've come across an issue that repeatedly affected CLS scores in a negative way. Luckily for myself (and now you, too), I created a fix that has helped reduced CLS when rouge images without explicit width and height attributes are the offenders. For […]
 </description>
     <guid isPermaLink="false">863064170c72d222c69afb78f31479f8</guid>
-    <pubDate>Mon, 23 Oct 2023 09:06:29 +0000</pubDate>
+    <pubDate>Oct 23, 2023</pubDate>
     </item>
     
     <item>
@@ -149,7 +149,7 @@
     <description>While doing some vulnerability research for WordPress plugins myself and my clients use, I came across a plugin with 5M+ active installs that can be used in DDoS attacks by non-authenticated users. Let me preface this to say that the plugin itself is not vulnerable to a hack AFAIK, but has a flaw (IMO) that […]
 </description>
     <guid isPermaLink="false">a6b39564cf82a147cbb95419e5b8dc44</guid>
-    <pubDate>Sat, 30 Sep 2023 10:41:24 +0000</pubDate>
+    <pubDate>Sep 30, 2023</pubDate>
     </item>
     
     <item>
@@ -158,7 +158,7 @@
     <description>The concept of not getting what I want right now, without having to wait, has been completely lost on me. I'm eager for the results, and a lot of the time, I lose any patience that's required in order to get the results I want. I blame it on my childhood. Not because I was […]
 </description>
     <guid isPermaLink="false">719d289f7bc64288aea014d5d562746e</guid>
-    <pubDate>Thu, 21 Jan 2016 06:09:00 +0000</pubDate>
+    <pubDate>Jan 21, 2016</pubDate>
     </item>
     
     <item>
@@ -167,7 +167,7 @@
     <description>There's now been 7 days in the books for me working full time on WP Dispensary and I want to take a little bit of time to talk about what I've been up to.
 </description>
     <guid isPermaLink="false">84791d2848b3befc8ed168ab3bd62e6e</guid>
-    <pubDate>Tue, 03 Oct 2017 14:10:58 +0000</pubDate>
+    <pubDate>Oct 03, 2017</pubDate>
     </item>
     
     <item>
@@ -176,7 +176,7 @@
     <description>Pushing your product online is about to get a lot easier. Today I am releasing my newest WordPress theme, Peddle, into the wild. It's a free WordPress theme that fully integrates with the Easy Digital Downloads plugin, which lets you (surprise, surprise) sell your digital products online through your own website. Why the name Peddle? […]
 </description>
     <guid isPermaLink="false">8d392f88b9f6cb13069b3a3ecb1c07ab</guid>
-    <pubDate>Thu, 10 Sep 2015 16:59:09 +0000</pubDate>
+    <pubDate>Sep 10, 2015</pubDate>
     </item>
     
     <item>
@@ -185,7 +185,7 @@
     <description>On this day last year I went all in with WP Dispensary, leaving behind 10+ years of full time freelancing. It was one of the most exciting times in my life, both professionally and personally. I felt a huge weight lifted off my shoulders when I was able to stop freelancing and focus full time […]
 </description>
     <guid isPermaLink="false">be37eccce2bc4f23c0b2baec5cfe2eb1</guid>
-    <pubDate>Wed, 26 Sep 2018 19:03:25 +0000</pubDate>
+    <pubDate>Sep 26, 2018</pubDate>
     </item>
     
     <item>
@@ -194,7 +194,7 @@
     <description>When it comes to building something that you want to turn into a business and earn a living from, there's a lot of paths to success. Sometimes you go viral because one specific person tweeted you. Other times there's 3-4 years of hard work behind the scenes before a coordinated launch effort. Maybe you're the […]
 </description>
     <guid isPermaLink="false">7facfc8c6672b62c59caa3ba35061585</guid>
-    <pubDate>Tue, 21 Jun 2016 08:01:44 +0000</pubDate>
+    <pubDate>Jun 21, 2016</pubDate>
     </item>
     
     <item>
@@ -203,7 +203,7 @@
     <description>I recently built and released a new plugin on WP Dispensary that works 100% without WP Dispensary. &amp;quot;But didn't you just jump in full time to build WP Dispensary? Why create something that doesn't work with it?&amp;quot; I know, right?
 </description>
     <guid isPermaLink="false">e5cfcc61de16b504e535d89d1db5399f</guid>
-    <pubDate>Tue, 17 Oct 2017 20:26:01 +0000</pubDate>
+    <pubDate>Oct 17, 2017</pubDate>
     </item>
     
     <item>
@@ -212,7 +212,7 @@
     <description>I forked a color picker for WordPress I know what you're thinking. Isn't there a color picker in WordPress already? Yeah … ? Why a color picker for WordPress? Technically, the hue.js color picker works independently of WordPress, so it's not a color picker for WordPress at all. But to understand &amp;quot;why a color picker […]
 </description>
     <guid isPermaLink="false">6ad5f8bf3da66f93e9b4c90ded998ccb</guid>
-    <pubDate>Tue, 03 Apr 2018 12:44:13 +0000</pubDate>
+    <pubDate>Apr 03, 2018</pubDate>
     </item>
     
     <item>
@@ -221,7 +221,7 @@
     <description>Life is chaotic, and beyond death nothing is ever guaranteed to you. While your goal should never change to fit your current life situation, the path you take to achieve it may have to for reasons far beyond your control. Be unwavering in your goals, but never be too rigid in the steps you take […]
 </description>
     <guid isPermaLink="false">d7410255572a496e179b762ca2f3d74d</guid>
-    <pubDate>Tue, 20 Dec 2016 08:58:22 +0000</pubDate>
+    <pubDate>Dec 20, 2016</pubDate>
     </item>
     
     <item>
@@ -230,7 +230,7 @@
     <description>Growing pains are a part of everyone's life. From the time you're little and you wake up in the middle of the night with leg cramps because you're getting taller, to the time you have to bite your tongue when someone makes an offhand remark you don't like. Change is inevitable. Personal growth is a […]
 </description>
     <guid isPermaLink="false">b515ec3c2bf7b01ddd22765768344250</guid>
-    <pubDate>Wed, 09 Mar 2016 15:27:38 +0000</pubDate>
+    <pubDate>Mar 09, 2016</pubDate>
     </item>
     
     <item>
@@ -239,7 +239,7 @@
     <description>When building your digital marketing strategy, social media websites like Twitter are usually at the top of the list. I mean, with over 300 million active users on Twitter, you'd be hard pressed to find a marketing blog that doesn't recommend Twitter marketing tips, and for good reason. But how can you supercharge your marketing […]
 </description>
     <guid isPermaLink="false">023f2c8ef1848ead92f0612ea808e3ee</guid>
-    <pubDate>Tue, 23 Aug 2016 06:28:36 +0000</pubDate>
+    <pubDate>Aug 23, 2016</pubDate>
     </item>
     
     <item>
@@ -248,7 +248,7 @@
     <description>What better way to start off the year than to release a free WordPress plugin that lets you design your popups using the core WordPress editor? That's exactly what I'm doing today - say hello to BoostBox 😎 Whether you and I like or not, WordPress has gone FSE and it's not going back to […]
 </description>
     <guid isPermaLink="false">24ee72da62568426a34c4e09ada806bb</guid>
-    <pubDate>Thu, 11 Jan 2024 14:54:04 +0000</pubDate>
+    <pubDate>Jan 11, 2024</pubDate>
     </item>
     
     <item>
@@ -257,7 +257,7 @@
     <description>It is now less than 2 weeks until I release version 2.0 of WP Dispensary. And if you're not looking at a calendar, yes, the release date is 4/20 ? After working on this release, I took a step back and realized that it's been a hell of a journey to get here. From it's […]
 </description>
     <guid isPermaLink="false">2d913958ad9ffecdadf0ca0e7cc796a9</guid>
-    <pubDate>Mon, 09 Apr 2018 07:23:24 +0000</pubDate>
+    <pubDate>Apr 09, 2018</pubDate>
     </item>
     
     <item>
@@ -266,7 +266,7 @@
     <description>DocuPress is a documentation plugin for WordPress that lets you, you guessed it, add documentation directly from your website's WordPress dashboard. This is the 6th free plugin I've released in the WordPress plugin repository and one that I definitely know I'm going to be using myself … a lot.
 </description>
     <guid isPermaLink="false">d1c1a98ca898faa1ac5d9ce345d0b267</guid>
-    <pubDate>Fri, 12 May 2017 13:12:33 +0000</pubDate>
+    <pubDate>May 12, 2017</pubDate>
     </item>
     
     <item>
@@ -275,7 +275,7 @@
     <description>The soundtrack for this blog post is the Ted Dibiase Million Dollar Man Theme Song (youtube) WordPress - real name, no gimmicks 🙄 First, let me say that I'm thankful for WordPress. I'd also like to say that I agree with Matt on predatory practices of &amp;quot;big money&amp;quot; in order to further their bottom lines. […]
 </description>
     <guid isPermaLink="false">3a23572172a429d1e3db0c96544d1ee5</guid>
-    <pubDate>Mon, 23 Sep 2024 16:19:53 +0000</pubDate>
+    <pubDate>Sep 23, 2024</pubDate>
     </item>
     
     <item>
@@ -284,7 +284,7 @@
     <description>If not now, then when? Today is the day I start working full time on my own product!
 </description>
     <guid isPermaLink="false">24f9838e188a2c9728d9715deb49be0a</guid>
-    <pubDate>Tue, 26 Sep 2017 10:12:55 +0000</pubDate>
+    <pubDate>Sep 26, 2017</pubDate>
     </item>
     
     <item>
@@ -293,7 +293,7 @@
     <description>Today I'm happy to announce the release of User Login Status, a WordPress plugin designed to help administrators easily monitor user activity and manage user sessions with ease. This plugin comes with a couple key features that allow you to quickly identify which users are logged in and take action by logging them out en-masse if […]
 </description>
     <guid isPermaLink="false">8ac13cb94931f7ab26214bdaed70d758</guid>
-    <pubDate>Sun, 29 Sep 2024 06:16:08 +0000</pubDate>
+    <pubDate>Sep 29, 2024</pubDate>
     </item>
     
     <item>
@@ -302,7 +302,7 @@
     <description>The last time I was this excited to announce a new baby, it was my son 😂 Today I'd like to formally introduce you to IntelliPress, an AI WordPress plugin that integrates with the OpenAI API. It's built to help you write content faster, optimize it for search engines, generate featured images from Pexels, and […]
 </description>
     <guid isPermaLink="false">c530026174c4cbf39221ffb2ab0851fa</guid>
-    <pubDate>Wed, 31 May 2023 10:09:16 +0000</pubDate>
+    <pubDate>May 31, 2023</pubDate>
     </item>
     
     <item>
@@ -311,7 +311,7 @@
     <description>Over the last two years, the WP Dispensary WordPress plugin has changed my entire life. In these last two years, WP Dispensary has gone from being just a &amp;quot;thing&amp;quot; I built to a thing that powers hundreds of websites for cannabis businesses around the world. It's also become my full time job, giving me the […]
 </description>
     <guid isPermaLink="false">175153c4617b65ea09f179b6b810291f</guid>
-    <pubDate>Mon, 11 Dec 2017 21:23:21 +0000</pubDate>
+    <pubDate>Dec 11, 2017</pubDate>
     </item>
     
     <item>
@@ -320,7 +320,7 @@
     <description>Another day, another free WordPress plugin release 🚀💪 Are you tired of manually flushing your permalinks every time you make structural changes to your WordPress site?  Phlush Permalinks, a new WordPress plugin I developed helps to automate this essential task, ensuring that your permalinks remain optimized without any manual intervention. Whether you're updating post types, […]
 </description>
     <guid isPermaLink="false">7e0e7f35e6a70ebe3b56443455635084</guid>
-    <pubDate>Thu, 05 Sep 2024 14:55:01 +0000</pubDate>
+    <pubDate>Sep 05, 2024</pubDate>
     </item>
     
     <item>
@@ -329,7 +329,7 @@
     <description>Today I am happy to announce the release of my newest open source plugin, Delivery Drivers for WooCommerce. As you can probably guess by the name, it's a plugin for WooCommerce that adds functionality for businesses who offer delivery and would like greater control over the entire process. Part of the reason that I built […]
 </description>
     <guid isPermaLink="false">0a1d24042afe798390e796e0a48d6f63</guid>
-    <pubDate>Fri, 14 Sep 2018 15:44:01 +0000</pubDate>
+    <pubDate>Sep 14, 2018</pubDate>
     </item>
     
     <item>
@@ -338,7 +338,7 @@
     <description>Within the last few months I have been developing this plugin from the ground up. I've ensured that when the product was released, there would be a great use for it, and a demand for more solutions like it. With a market that is 29 states strong right now, and more states positioned to legalize […]
 </description>
     <guid isPermaLink="false">9724a07e9dda7795bcce672ca910808f</guid>
-    <pubDate>Mon, 18 Jan 2016 14:41:21 +0000</pubDate>
+    <pubDate>Jan 18, 2016</pubDate>
     </item>
     
     <item>
@@ -347,7 +347,7 @@
     <description>This isn't your average &amp;quot;2017 Goals&amp;quot; article with a list of bullshit and nonsense that I know damn well gets forgotten within the first couple of weeks into January. There's no exhaustive list of totally awesome shit I am going to accomplish or overly detailed blabbering about what 2016 taught me. No resolutions. No fucking around.
 </description>
     <guid isPermaLink="false">7040fccd8901bc034f6f3fc85c4abac5</guid>
-    <pubDate>Mon, 02 Jan 2017 09:35:54 +0000</pubDate>
+    <pubDate>Jan 02, 2017</pubDate>
     </item>
     
     <item>
@@ -356,7 +356,7 @@
     <description>Creativity comes in many forms. Today, I would like to display another form of creative expression I have been interested in with a Sons of Anarchy fanfiction story. I've wrote fiction for as long as I can remember, and a couple of years ago I started working on a Sons of Anarchy fanfiction about life after the series […]
 </description>
     <guid isPermaLink="false">72a1ff2fe34b58480cde935384534f9b</guid>
-    <pubDate>Wed, 31 May 2017 13:08:09 +0000</pubDate>
+    <pubDate>May 31, 2017</pubDate>
     </item>
     
     <item>
@@ -365,7 +365,7 @@
     <description>This post is going to show you how to add a few small code snippets to change the appearance of the WordPress login screen. We'll walk through the process of changing the default WordPress logo to your own using the login_headertext filter that was added in WordPress 5.2 And I'm going to break down how […]
 </description>
     <guid isPermaLink="false">a9d9c01b5b0310d602aa2410d18d194e</guid>
-    <pubDate>Thu, 27 Jun 2019 18:12:57 +0000</pubDate>
+    <pubDate>Jun 27, 2019</pubDate>
     </item>
     
     <item>
@@ -374,7 +374,7 @@
     <description>Minimalism is beautiful. There's something about the clean, airy feeling you get when you look at a design that's truly minimalist in it's execution that makes you feel all warm and fuzzy inside. At least that's how it makes me feel. In the spirit of beautiful minimalism, today I am releasing my second free WordPress […]
 </description>
     <guid isPermaLink="false">9cf4a7907f8d7237d3ff34861a2612dd</guid>
-    <pubDate>Wed, 02 Sep 2015 17:43:07 +0000</pubDate>
+    <pubDate>Sep 02, 2015</pubDate>
     </item>
     
     <item>
@@ -383,7 +383,7 @@
     <description>Today, I am releasing my first official open source WordPress theme. I've worked with WordPress for years, but have never created anything that is free to download … until now. Being able to create open source projects, like WordPress themes, has always weighed heavy on my mind. Without WordPress itself, and the free themes released […]
 </description>
     <guid isPermaLink="false">a6c26127308f069c13868c75bf5e13b3</guid>
-    <pubDate>Fri, 07 Aug 2015 14:20:44 +0000</pubDate>
+    <pubDate>Aug 07, 2015</pubDate>
     </item>
     
     <item>
@@ -392,7 +392,7 @@
     <description>Since late last year I've been hard at work on various development projects. While I've spent time blogging about each of them here, I haven't updated the posts with new details about each of the projects. This post is aiming to do that. WP Dispensary This has been my biggest focus the last couple of […]
 </description>
     <guid isPermaLink="false">b4afa9c4787b0a24d7b1644d1530fec2</guid>
-    <pubDate>Wed, 16 Mar 2016 11:24:34 +0000</pubDate>
+    <pubDate>Mar 16, 2016</pubDate>
     </item>
     
     <item>
@@ -401,7 +401,7 @@
     <description>You know those moments in your life where you step back and look around, knowing that things are about to change? Yeah, I'm having one of those moments right now. I've wrote a lot of code in my lifetime and customized other WordPress plugins in the past, but today marks a special moment in history, […]
 </description>
     <guid isPermaLink="false">ab0698d3c47ee8aacdd9746abe1001dd</guid>
-    <pubDate>Thu, 15 Oct 2015 00:31:28 +0000</pubDate>
+    <pubDate>Oct 15, 2015</pubDate>
     </item>
     
     <item>
@@ -410,7 +410,7 @@
     <description>Everything is insecure and you're one bad decision away from being p0wn3d harder than you ever have in your entire life. It's a harsh reality and one you've got to accept in full or ignore altogether. I'm from the group that believes we can fix some of the things that are broken, even if only […]
 </description>
     <guid isPermaLink="false">5e0360487df9c04633393c4a9b63937b</guid>
-    <pubDate>Wed, 09 Aug 2023 10:50:04 +0000</pubDate>
+    <pubDate>Aug 09, 2023</pubDate>
     </item>
     
     <item>
@@ -419,7 +419,7 @@
     <description>WordPress version 1.5, named Strayhorn after the pianist Billy Strayhorn because &amp;quot;we thought he was perfect to represent the power and elegance of this release&amp;quot; was released February 17th, 2002. That seems to hold true with the upgrades that 1.5 brought users and developers, like the addition of Pages, additional templates and site customization, comment […]
 </description>
     <guid isPermaLink="false">4218a53a8a8d2f157f07ab15b0641b36</guid>
-    <pubDate>Sun, 27 May 2018 13:52:09 +0000</pubDate>
+    <pubDate>May 27, 2018</pubDate>
     </item>
     
     <item>
@@ -428,7 +428,7 @@
     <description>Over the last few months I've watched as Gutenberg has been developed, silently taking notes, watching for patterns and possible areas to excel in. Then I found that the domain Pillar.Press was available and it snapped me into action. You see, for about 6 months I've had the name Pillar saved as a name idea […]
 </description>
     <guid isPermaLink="false">24c90f1e8840dfe18ecd370555ba6a56</guid>
-    <pubDate>Mon, 14 May 2018 10:33:39 +0000</pubDate>
+    <pubDate>May 14, 2018</pubDate>
     </item>
     
     <item>
@@ -437,7 +437,7 @@
     <description>This question changed everything. I was in the middle of writing a blog post titled &amp;quot;Hitting pause&amp;quot;, outlining how I was going to be pushing back the CannaBiz Software launch and focus my efforts elsewhere. Then out of nowhere I was given an opportunity for additional work outside of my regular nine to five hours. […]
 </description>
     <guid isPermaLink="false">83ce8ef748d4c329fbf5880653e0f4e5</guid>
-    <pubDate>Tue, 15 Nov 2022 02:12:45 +0000</pubDate>
+    <pubDate>Nov 15, 2022</pubDate>
     </item>
     
     </channel>
