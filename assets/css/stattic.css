@@ -280,3 +280,8 @@ figure.about-image img {
 .is-content-justification-center {
     text-align: center;
 }
+
+#main-content > h1 {
+    text-align: center;
+    margin: 0 auto;
+}
