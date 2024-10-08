@@ -87,7 +87,7 @@
 .stattic-content h5, 
 .stattic-content h6 {
     margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-color);
 }
 
@@ -167,7 +167,7 @@
     background-color: var(--background-color);
     color: var(--text-color);
     text-align: left;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .stattic-content td {
