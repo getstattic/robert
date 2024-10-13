@@ -295,10 +295,16 @@ figure.about-image img {
 /** Home Page */
 
 #home-hero {
-    background: url('../images/bg_skull.webp') no-repeat center center;
+    background: url('/images/bg_skull.webp') no-repeat center center;
     background-size: cover;
 }
 
 #home-title {
     font-size: 1.5rem;
+}
+
+/** Footer */
+
+#footer {
+    background: url('/images/bg_texture.png') repeat center center;
 }
