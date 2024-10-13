@@ -13,6 +13,10 @@ strong {
     font-weight: 400;
 }
 
+.stattic-content ul {
+    list-style: disc;
+}
+
 .skip-link {
     position: absolute;
     top: -40px;
