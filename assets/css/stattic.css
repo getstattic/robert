@@ -289,3 +289,10 @@ figure.about-image img {
     text-align: center;
     margin: 0 auto;
 }
+
+/** Home Page */
+
+#home-hero {
+    background: url('../images/bg_skull.webp') no-repeat center center;
+    background-size: cover;
+}
