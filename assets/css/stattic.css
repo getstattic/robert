@@ -88,7 +88,9 @@ strong {
     color: var(--text-color);
 }
 
+#home-hero h1,
 #main-content > h1,
+#home-title,
 article > h1 {
     color: #000 !important;
     text-decoration: none;
@@ -295,4 +297,8 @@ figure.about-image img {
 #home-hero {
     background: url('../images/bg_skull.webp') no-repeat center center;
     background-size: cover;
+}
+
+#home-title {
+    font-size: 1.75rem;
 }
