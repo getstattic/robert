@@ -1,1 +1,138 @@
-Error: Template syntax error in templates/base.html at line 61: expected token 'end of statement block', got '='
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>Leafly Reviews | Robert DeVore - Creative Thinker. Hustler. Web Developer Entrepreneur.</title>
+        <meta name="description" content="Robert is an opinionated developer who is building Stattic and CannaBiz Software, LLC.">
+        <meta name="keywords" content="SSG, Static Site Generator">
+        <meta name="author" content="Robert">
+    
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<!-- Skip Links for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#footer" class="skip-link">Skip to footer</a>
+
+<header class="bg-background shadow" id="navigation">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl quicksand-700"><a href="/" class="text-links">Robert DeVore</a></h2>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    
+                    <li><a href="/about/" class="text-primary hover:underline quicksand-700">About</a></li>
+                    
+                
+                    
+                    <li><a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a></li>
+                    
+                
+                    
+                    <li><a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a></li>
+                    
+                
+                    
+                    <li><a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">Plugins</a></li>
+                    
+                
+                    
+                    <li><a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a></li>
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
+    <article class="prose dark:prose-dark max-w-none">
+        <h1 class="text-6xl mb-4 text-links quicksand-700">Leafly Reviews</h1>
+        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Oct 15, 2015</span> &middot; <span class="author">Robert</span></p>
+        
+        <div class="stattic-content mb-12">
+            <p>You know those moments in your life where you step back and look around, knowing that things are about to change?</p>
+<p>Yeah, I&#8217;m having one of those moments right now.</p>
+<p>I&#8217;ve wrote a lot of code in my lifetime and customized other WordPress plugins in the past, but today marks a special moment in history, for me at least, because I am officially releasing my first WordPress plugin.</p>
+<h2>Leafly Reviews WordPress plugin</h2>
+<p>As a dispensary owner, or developer who works with marijuana dispensaries, you&#8217;ve undoubtedly heard of the Leafly website before.</p>
+<p>Odds are very high that a dispensary worth anything has a profile on Leafly and is getting reviews from patients.</p>
+<p>Until today, there was not an easy way to showcase those reviews on your own website. That&#8217;s all about to change.<!--more--></p>
+<p><strong>Introducing Leafly Reviews for WordPress!</strong></p>
+<p>This free WordPress plugin gives you a way to easily display your dispensary reviews from Leafly on your own website through the use of a widget or shortcode.</p>
+<h3>Download</h3>
+<p>I&#8217;d suggest reading the entire post, but if you just can&#8217;t wait to get your hands on the plugin, you can <a href="#download">click here</a> to be taken to the bottom of the post with the download links.</p>
+<h3>Adding your APP ID and KEY</h3>
+<p>Once you install this plugin, you&#8217;ll notice a new options page in your WordPress dashboard under the Settings section, titled &#8220;Leafly Reviews&#8221;.</p>
+<p>On this page, you&#8217;ll be able to add in your APP ID and KEY, which is needed for the plugin to work.</p>
+<p>Not sure where to get your APP ID and KEY?</p>
+<p>You get them from the <a href="http://developer.leafly.com/" target="_blank">Leafly Developer</a> area, which lets you sign up for an account and create an app.</p>
+<p>When you create the app, you&#8217;ll be given a KEY and ID to use, which is what you&#8217;ll need to copy over to this plugin&#8217;s settings page.</p>
+<p><strong>Caching built in</strong></p>
+<p>Leafly gives their API users a limit of 25 hits per day for their <strong>seed</strong> account, or 60 hits per minute for their <strong>bloom</strong> account.</p>
+<p>To help your dispensary utilize this plugin without needing to upgrade to bloom, and taking too many hits to your account, I&#8217;ve built in a cache that refreshes once per hour.</p>
+<p>There&#8217;s nothing that you need to do on your end in order to get this to work, it&#8217;s baked right in to the plugin &#8211; pardon the pun 🙂</p>
+<h3>Widget Options</h3>
+<p><img loading="lazy" decoding="async" src="/images/leafly-reviews-wordpress-plugin-widget.webp" alt="leafly-reviews-wordpress-plugin-widget" width="312" height="487" class="alignleft size-full wp-image-150" />After you install the Leafly Reviews WordPress plugin, you&#8217;ll be able to add a custom widget to your website&#8217;s sidebar (or anywhere else that widgets are enabled in your theme).</p>
+<p>The widget is colored green, so you&#8217;ll be able to easily spot it on your widgets page. Drag it into place where ever you&#8217;d like it to show, and fill in the options, which you can see to the left.</p>
+<p>Here, you can add in your dispensaries URL slug and the amount of reviews you&#8217;d like to show (limit: 100). </p>
+<p>You can also select if you want to show the reviewer&#8217;s avatar, the star rating, individual ratings for meds, service and atmosphere, if the user reviewer would recommend your dispensary and shop there again, and also show the reviewers comments.</p>
+<h3>Shortcode Options</h3>
+<p>A secondary option built into the plugin to display your reviews from Leafly is the shortcode. Sometimes, it might be a better option to show reviews on a page of your website (for instance, the home page), so the shortcode will give you all of the flexibility you need.</p>
+<p>Here is the basic shortcode:</p>
+<p><code>[leaflyreviews slug="denver-relief"]</code></p>
+<p>You will need to add in your slug, just like the widget options. The shortcode will default to showing 5 reviews, and all of the options given in the widget (avatar, star rating, detailed rating, recommendation, shop again and comments.</p>
+<p>If you&#8217;d like to remove some of these options from showing, you can add the option to the shortcode with the value of <em>no</em>, like this:</p>
+<p><code>[leaflyreviews slug="denver-relief" limit="5" avatar="no" stars="no" ratings="no" recommend="no" shopagain="no" comments="no"]</code></p>
+<h2>Credits &amp; Thank-you&#8217;s</h2>
+<p>Without the open source projects below, this plugin would have never came together the way that it has. I&#8217;d like to say thank you to everyone who was indirectly a part of this WordPress plugin&#8217;s release.</p>
+<ul>
+<li><a href="http://developer.leafly.com" target="_blank">Leafly Developer Center</a></li>
+<li><a href="http://wppb.me/" target="_blank">WordPress Plugin Boilerplate</a></li>
+<li><a href="http://github.com/gilbitron/PHP-SimpleCache" target="_blank">PHP SimpleCache</a></li>
+<li><a href="http://www.fontawesome.io" target="_blank">Font Awesome</a></li>
+</ul>
+<h2 id="download">Download</h2>
+<p><strong>Leafly closed it&#8217;s API, so as of 2.29.16, this plugin no longer works.</strong></p>
+<p>I will be keeping an eye out if an API ever opens back up and I can update this plugin.</p>
+<p>Still want to check the plugin out anyways?</p>
+<p>You can download the Leafly Reviews WordPress plugin via the <a href="http://wordpress.org/plugins/leafly-reviews/" target="_blank">official WordPress plugin repository</a>.</p>
+<p>You can also download it directly from your WordPress dashboard by going to <code>Plugins - Add New</code> and searching for <strong>Leafly Reviews</strong>.</p>
+<h2>The road ahead</h2>
+<p>Thank you for taking the time to read this entire release post.</p>
+<p>Right now, the plugin is going to sit while it gets tested out by various dispensaries in order to find any bugs that need fixed.</p>
+<p>I&#8217;ve also got plans in the future to add an option for the user to select the amount of time that passes before the cache refreshes itself, as well as a couple of other enhancements.</p>
+<p>Want to contribute to the plugin? Head over to the <a href="http://github.com/deviodigital/leafly-reviews-wordpress-plugin" target="_blank">Github repository</a> and submit any issues you find or pull requests. Your contributions are both welcomed and appreciated.</p>
+        </div>
+    </article>
+</main>
+
+
+<footer class="bg-background border-t border-primary mt-10 pt-12 pb-12 text-center text-sm" id="footer">
+    
+        <h4 class="text-yellow-custom text-2xl font-semibold mb-4">Let's Connect</h4>
+        <p>If you have questions or want to discuss custom development work, get in touch.</p>
+        <a href="/contact/" class="mt-6 px-6 py-2 bg-primary text-gray-900 font-semibold rounded-full hover:bg-yellow-500">Get in Touch</a>
+        <p class="mt-6">&copy; 1985-2024 Robert DeVore &middot; Get <a href="https://stattic.site/" target="_blank" class="text-links" aria-label="Stattic - opens in a new tab">Stattic</a> &middot; <a href="https://github.com/robertdevore/" class="text-yellow-custom hover:underline" aria-label="GitHub - opens in a new tab">GitHub</a> &middot; <a href="https://x.com/deviorobert/" class="text-yellow-custom hover:underline" aria-label="Twitter - opens in a new tab">Twitter</a></p>
+    
+    
+</footer>
+
+</body>
+</html>

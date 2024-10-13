@@ -1,1 +1,144 @@
-Error: Template syntax error in templates/base.html at line 61: expected token 'end of statement block', got '='
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>? hue.js | Robert DeVore - Creative Thinker. Hustler. Web Developer Entrepreneur.</title>
+        <meta name="description" content="Robert is an opinionated developer who is building Stattic and CannaBiz Software, LLC.">
+        <meta name="keywords" content="SSG, Static Site Generator">
+        <meta name="author" content="Robert">
+    
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<!-- Skip Links for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#footer" class="skip-link">Skip to footer</a>
+
+<header class="bg-background shadow" id="navigation">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl quicksand-700"><a href="/" class="text-links">Robert DeVore</a></h2>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    
+                    <li><a href="/about/" class="text-primary hover:underline quicksand-700">About</a></li>
+                    
+                
+                    
+                    <li><a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a></li>
+                    
+                
+                    
+                    <li><a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a></li>
+                    
+                
+                    
+                    <li><a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">Plugins</a></li>
+                    
+                
+                    
+                    <li><a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a></li>
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
+    <article class="prose dark:prose-dark max-w-none">
+        <h1 class="text-6xl mb-4 text-links quicksand-700">? hue.js</h1>
+        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Apr 03, 2018</span> &middot; <span class="author">Robert</span></p>
+        
+        <div class="stattic-content mb-12">
+            <h2>I forked a color picker for WordPress</h2>
+<p>I know what you&#8217;re thinking.</p>
+<p><em>Isn&#8217;t there a color picker in WordPress already?<br />
+</em></p>
+<p>Yeah &#8230; ?</p>
+<p><figure id="attachment_1185" aria-describedby="caption-attachment-1185" style="width: 500px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-1185" src="/images/dj-khaled-another-one-2.webp" alt="" width="500" height="251" /><figcaption id="caption-attachment-1185" class="wp-caption-text">Not another color picker?!?!</figcaption></figure></p>
+<h2>Why a color picker for WordPress?</h2>
+<p>Technically, the <a href="https://www.github.com/deviodigital/hue.js" target="_blank" rel="noopener">hue.js</a> color picker works independently of WordPress, so it&#8217;s not a color picker for WordPress at all.</p>
+<p>But to understand &#8220;<em>why a color picker for WordPress&#8221;</em>, we have to go a couple of steps back to where the idea originally stems from.</p>
+<p>I&#8217;ve been working on version 2.0 (<a href="https://twitter.com/hashtag/WPD2?src=hash&amp;lang=en" target="_blank" rel="noopener">#WPD2</a>) of <a href="https://www.wpdispensary.com/" target="_blank" rel="noopener">WP Dispensary</a> and a couple of weeks ago I ran into an issue when figuring out the best approach for a specific portion of the release &#8211; the <code>Settings</code> page.</p>
+<p>So, I did what any grown ass man does when he runs into a problem&#8230;</p>
+<p>I jumped on Twitter ?</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">Any framework/code recommendations for a plugin&#39;s settings page, with tabbed areas?</p>
+<p>Not sure if there&#39;s some sort of standard but if there is, I haven&#39;t been able to find it yet.</p>
+<p>&mdash; Robert DeVore (@deviorobert) <a href="https://twitter.com/deviorobert/status/974451130578145280?ref_src=twsrc%5Etfw">March 16, 2018</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>Luckily for me, there&#8217;s a lot of dope developers in the WordPress community and I got recommendations to some nice solutions, but one stuck out in particular.</p>
+<p><a href="https://twitter.com/MrAhmadAwais/" target="_blank" rel="noopener">Ahmad Awais</a> reached out and let me know about the <a href="https://github.com/AhmadAwais/WP-OOP-Settings-API" target="_blank" rel="noopener">WP OOP Settings API</a> he built and after looking it over, I knew I wanted to use this as the base code for the Settings page rebuild in <a href="https://twitter.com/hashtag/WPD2?src=hash&amp;lang=en" target="_blank" rel="noopener">#WPD2</a>.</p>
+<p><figure id="attachment_1188" aria-describedby="caption-attachment-1188" style="width: 300px" class="wp-caption aligncenter"><a href="https://github.com/AhmadAwais/WP-OOP-Settings-API" target="_blank" rel="noopener"><img loading="lazy" decoding="async" class="wp-image-1188 size-medium" src="/images/wposa-300x188.webp" alt="" width="300" height="188" /></a><figcaption id="caption-attachment-1188" class="wp-caption-text">WP OOP Settings API</figcaption></figure></p>
+<p>It wasn&#8217;t long until I was working with Ahmad on WPOSA and became the project lead for the release of version 2.0.</p>
+<p><em>More info on v2.0 of WPOSA coming soon</em> ?</p>
+<p>While working on the <strong>WP OOP Settings API</strong> I had to update the outdated color picker it was using and found <a href="http://automattic.github.io/Iris/" target="_blank" rel="noopener">Iris</a>.</p>
+<p>Iris was initially developed for <a href="http://en.blog.wordpress.com/2012/07/11/go-ahead-add-a-splash-of-color/" target="_blank" rel="noopener">Custom Colors</a> on WordPress.com and eventually shipped with WordPress starting in version 3.5.</p>
+<h2>Sticking a fork in the Iris ?</h2>
+<p><a href="http://automattic.github.io/Iris/" target="_blank" rel="noopener">Iris</a> is well built, <em>and</em> it comes prepackaged with WordPress, so there&#8217;s less work required for developers who need a color picker in their projects.</p>
+<p>But it hasn&#8217;t been updated on <a href="https://github.com/Automattic/Iris" target="_blank" rel="noopener">Github</a> in over 2 years, and there are a couple of nice PR&#8217;s just waiting there to be merged.</p>
+<p>I wanted those updates in my code and figured that while updating my version of the files, I&#8217;d also fork Iris and work on making the code better, while simultaneously learning JavaScript in the process.</p>
+<p>I mean, we&#8217;re all supposed to <a href="https://javascriptforwp.com/parts/javascript/" target="_blank" rel="noopener">Learn Javascript Deeply</a>, right?</p>
+<h2>Contributing to open source</h2>
+<p>The way I see it is this:</p>
+<p>I may be the only person who ever needs to use this specific color picker within a WordPress. context</p>
+<p><strong>I&#8217;m fine with that.</strong></p>
+<p>I may also learn a lot of JavaScript over the next year or two and incorporate that into additional updates for <a href="https://github.com/deviodigital/hue.js" target="_blank" rel="noopener">hue.js</a> that I can also submit as PR&#8217;s to Iris.</p>
+<p><strong>I&#8217;m also fine with that.</strong></p>
+<p>Regardless of what happens to this code within the next 6 days, 6 months or 6 years is irrelevant.</p>
+<p>The code being available for the next person to download and enhance to their needs, whenever they may need it is what&#8217;s important to me.</p>
+<p>That&#8217;s the beauty of Open Source.</p>
+<p>I&#8217;m happy to play my part in it, no matter how big or small of an impact my contributions end up having.</p>
+<p>Open source code is how I ended up turning an open source project into my full time business: <a href="https://www.wpdispensary.com" target="_blank" rel="noopener">WP Dispensary</a>.</p>
+<p>I plan to give back as much as I can, as long as I can, because without open source code, <a href="http://robertdevore.com/about/">I wouldn&#8217;t be here</a>.</p>
+<p>I am grateful for WordPress and everyone who&#8217;s played their part in it being here this many years later.</p>
+<h2>? hue.js download</h2>
+<p>You can download <a href="https://github.com/deviodigital/hue.js" target="_blank" rel="noopener">hue.js</a> from the command line:</p>
+<blockquote><p>git clone https://github.com/deviodigital/hue.js</p></blockquote>
+<p>Want to download a zip file?</p>
+<p>You can do that <a href="https://github.com/deviodigital/hue.js" target="_blank" rel="noopener">here</a>.</p>
+<h2>Adding hue.js to your project</h2>
+<p>Being able to use hue.js in your project is pretty simple.</p>
+<p>First, you need to download the files (see above).</p>
+<p>You then need to copy over the <code>hue.js</code> file into your project and add it, like below.</p>
+<blockquote><p>&lt;script src=&#8221;/your/folder/structure/hue.js&#8221;&gt;&lt;/script&gt;</p></blockquote>
+<p>Now, you can now initiate the hue color picker by attaching it to a specific class, for instance <code>color-picker</code>.</p>
+<blockquote><p>$(&#8216;.color-picker&#8217;).hue();</p></blockquote>
+<p>That&#8217;s all there is to it. Now, anywhere the class is called (for instance, on a text input field), it will initiate the color picker.</p>
+<p><figure id="attachment_1195" aria-describedby="caption-attachment-1195" style="width: 750px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="size-full wp-image-1195" src="/images/color-picker.webp" alt="" width="750" height="350" /><figcaption id="caption-attachment-1195" class="wp-caption-text">example color picker</figcaption></figure></p>
+<h3>Bug reports &amp; Pull requests</h3>
+<p>Just a note to let you know bug reports &amp; pull requests are always welcome ?</p>
+        </div>
+    </article>
+</main>
+
+
+<footer class="bg-background border-t border-primary mt-10 pt-12 pb-12 text-center text-sm" id="footer">
+    
+        <h4 class="text-yellow-custom text-2xl font-semibold mb-4">Let's Connect</h4>
+        <p>If you have questions or want to discuss custom development work, get in touch.</p>
+        <a href="/contact/" class="mt-6 px-6 py-2 bg-primary text-gray-900 font-semibold rounded-full hover:bg-yellow-500">Get in Touch</a>
+        <p class="mt-6">&copy; 1985-2024 Robert DeVore &middot; Get <a href="https://stattic.site/" target="_blank" class="text-links" aria-label="Stattic - opens in a new tab">Stattic</a> &middot; <a href="https://github.com/robertdevore/" class="text-yellow-custom hover:underline" aria-label="GitHub - opens in a new tab">GitHub</a> &middot; <a href="https://x.com/deviorobert/" class="text-yellow-custom hover:underline" aria-label="Twitter - opens in a new tab">Twitter</a></p>
+    
+    
+</footer>
+
+</body>
+</html>

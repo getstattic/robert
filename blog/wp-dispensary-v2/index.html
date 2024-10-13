@@ -1,1 +1,129 @@
-Error: Template syntax error in templates/base.html at line 61: expected token 'end of statement block', got '='
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>WP Dispensary v2.0 is being released on 4/20 | Robert DeVore - Creative Thinker. Hustler. Web Developer Entrepreneur.</title>
+        <meta name="description" content="Robert is an opinionated developer who is building Stattic and CannaBiz Software, LLC.">
+        <meta name="keywords" content="SSG, Static Site Generator">
+        <meta name="author" content="Robert">
+    
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<!-- Skip Links for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#footer" class="skip-link">Skip to footer</a>
+
+<header class="bg-background shadow" id="navigation">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl quicksand-700"><a href="/" class="text-links">Robert DeVore</a></h2>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    
+                    <li><a href="/about/" class="text-primary hover:underline quicksand-700">About</a></li>
+                    
+                
+                    
+                    <li><a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a></li>
+                    
+                
+                    
+                    <li><a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a></li>
+                    
+                
+                    
+                    <li><a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">Plugins</a></li>
+                    
+                
+                    
+                    <li><a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a></li>
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
+    <article class="prose dark:prose-dark max-w-none">
+        <h1 class="text-6xl mb-4 text-links quicksand-700">WP Dispensary v2.0 is being released on 4/20</h1>
+        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Apr 09, 2018</span> &middot; <span class="author">Robert</span></p>
+        
+        <div class="stattic-content mb-12">
+            <p>It is now less than 2 weeks until I release <strong>version 2.0</strong> of <a href="https://www.wordpress.org/plugins/wp-dispensary" target="_blank" rel="noopener"><strong>WP Dispensary</strong></a>.</p>
+<p>And if you&#8217;re not looking at a calendar, yes, the release date is 4/20 ?</p>
+<p>After working on this release, I took a step back and realized that it&#8217;s been a hell of a journey to get here.</p>
+<p>From it&#8217;s humble beginnings when it was <a href="https://www.wpdispensary.com/welcome-to-wp-dispensary/">first released</a> in November 2015, to last September when <a href="http://robertdevore.com/going-all-in-with-wp-dispensary/">I left freelancing</a> and started working on it full time, I&#8217;m still just as proud at every milestone <a href="https://www.wpdispensary.com" target="_blank" rel="noopener">WP Dispensary</a> hits.</p>
+<p>The release of <strong>version 2.0</strong> will be no different.</p>
+<p>Before pushing this update out to the world, I wanted to take time to outline some of the changes and new features you can expect.</p>
+<h2>Rebuilt Settings Page</h2>
+<p>This is arguably the biggest change coming in version 2.0 of <a href="http://robertdevore.com/two-years-building-wp-dispensary/">WP Dispensary</a>.</p>
+<p>Back when I first released WPD, I honestly didn&#8217;t put much thought into the <strong>Settings</strong> page.</p>
+<p>At the time, there wasn&#8217;t many settings at all, and I wanted to get the MVP out into the world.</p>
+<p>This update brings in a brand new <strong>Settings</strong> page, built with the <a href="https://github.com/AhmadAwais/WP-OOP-Settings-API" target="_blank" rel="noopener">WP OOP Settings API</a> from <a href="https://www.ahmadawais.com" target="_blank" rel="noopener">Ahmad Awaias</a>.</p>
+<p><figure id="attachment_1220" aria-describedby="caption-attachment-1220" style="width: 300px" class="wp-caption aligncenter"><a href="/images/wpd-v2-settings-page.webp"><img loading="lazy" decoding="async" class="wp-image-1220 size-medium" src="/images/wpd-v2-settings-page-300x243.webp" alt="" width="300" height="243" /></a><figcaption id="caption-attachment-1220" class="wp-caption-text">click to expand</figcaption></figure></p>
+<h3>Increased control over how to display data</h3>
+<p>Included in <strong>version 2.0</strong> are extra control over the way you display your menu item data on the front end of your website.</p>
+<p>For instance, in versions prior to <strong>v2.0</strong> the <strong>Pricing</strong> and <strong>Details</strong> tables that show up on single menu item pages had titles you couldn&#8217;t alter.</p>
+<p>Now, there&#8217;s a couple of options to choose from for each, as well as a way to type in your on custom titles.</p>
+<p>You are also able to <em>show/hide</em> each table and as of <a href="https://www.wpdispensary.com/demo/product/chemdawg/">version 2.0</a> you&#8217;ll be able to choose <em>above/below</em> placement options for both the <strong>Pricing</strong> and <strong>Details</strong> tables.</p>
+<h3>Easier for add-on&#8217;s to add their own settings</h3>
+<p>With the <strong>Settings</strong> being built with the <strong>WPOSA</strong>, it is giving me the ability to add additional tabs for the other add-on&#8217;s from <a href="https://www.wpdispensary.com" target="_blank" rel="noopener">WP Dispensary</a>.</p>
+<p>For instance, the <a href="https://www.wpdispensary.com/product/wooconnect-for-woocommerce/" target="_blank" rel="noopener">Connect for WooCommerce</a> add-on has it&#8217;s settings page added as a sub-menu item of the WooCommerce tab in the WordPress dashboard.</p>
+<p>After the release of WPD <strong>v2.0</strong>, I&#8217;ll be able to update the <strong>Connect for WooCommerce</strong> add-on to move it&#8217;s setting options into a tab of the WP Dispensary <strong>Settings</strong>.</p>
+<p>This means it&#8217;s easier to find these options for the user, and that&#8217;s always my goal &#8211; an easy to use product for all users, developers and dispensary owners alike.</p>
+<h2>Organized Edit Screens</h2>
+<p>Another big update as far as the UI is concerned is the cleaned up <strong>Edit</strong> screens for each menu type.</p>
+<p>Previously, all <strong>taxonomies</strong> and <strong>metaboxes</strong> for each menu type would display on the <strong>Edit</strong> screen, creating a bit of chaos and intimidation for users.</p>
+<p><strong>Version 2.0</strong> cleans house!</p>
+<p><figure id="attachment_1225" aria-describedby="caption-attachment-1225" style="width: 300px" class="wp-caption aligncenter"><a href="/images/wpd-v2-edit-screen.webp"><img loading="lazy" decoding="async" class="wp-image-1225 size-medium" src="/images/wpd-v2-edit-screen-300x238.webp" alt="" width="300" height="238" /></a><figcaption id="caption-attachment-1225" class="wp-caption-text">click to expand</figcaption></figure></p>
+<h3>Default hidden data boxes</h3>
+<p>Each menu type has it&#8217;s own set of <strong>metaboxes</strong> and <strong>taxonomies</strong>, but not all of them are needed by every user.</p>
+<p>Now, instead of having certain <strong>taxonomies</strong> like <strong>Aroma</strong>, <strong>Effects</strong>, and <strong>Symptoms</strong> display on the page by default, they are now hidden under the <strong>Screen Options</strong> area.</p>
+<p>This makes the <strong>Edit</strong> screen for WP Dispensary&#8217;s menu types a lot nicer to look at.</p>
+<h2>Code Optimization &amp; Speed Increases</h2>
+<p>This release will also feature a lot of code optimization and increases to the overall speed of the plugin.</p>
+<p>For instance, in the current version of the plugin, there&#8217;s about 100 lines of code which displays the <strong>currency code</strong> that users select in the <strong>Settings</strong>.</p>
+<p>Every file that needs to display the <strong>currency code</strong> would also needs that ~100 lines of code added to it.</p>
+<p>This became a headache, both in terms of code maintenance as well as visually when looking at the code.</p>
+<p>It felt good to remove those lines of code from each file and replace them with a custom function.</p>
+<p>This also means that add-on&#8217;s like <a href="https://www.wpdispensary.com/product/wooconnect-for-woocommerce" target="_blank" rel="noopener">Connect for WooCommerce</a> and <a href="https://www.wpdispensary.com/product/dispensary-heavyweights/" target="_blank" rel="noopener">Heavyweights</a>, which display <strong>currency codes</strong>, will be able to remove those extra lines of code.</p>
+<p>Code may be poetry, but clean code is magical!</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1222" src="/images/magic-2.webp" alt="" width="480" height="270" /></p>
+<h2>Calling for beta testers</h2>
+<p>I&#8217;ve been testing the code on various installs locally, but I&#8217;d love to have some outside eyes take a look at it and see if there&#8217;s any bugs or ways to enhance the plugin further that I&#8217;m missing.</p>
+<p>Want to help beta test? Get in touch!</p>
+        </div>
+    </article>
+</main>
+
+
+<footer class="bg-background border-t border-primary mt-10 pt-12 pb-12 text-center text-sm" id="footer">
+    
+        <h4 class="text-yellow-custom text-2xl font-semibold mb-4">Let's Connect</h4>
+        <p>If you have questions or want to discuss custom development work, get in touch.</p>
+        <a href="/contact/" class="mt-6 px-6 py-2 bg-primary text-gray-900 font-semibold rounded-full hover:bg-yellow-500">Get in Touch</a>
+        <p class="mt-6">&copy; 1985-2024 Robert DeVore &middot; Get <a href="https://stattic.site/" target="_blank" class="text-links" aria-label="Stattic - opens in a new tab">Stattic</a> &middot; <a href="https://github.com/robertdevore/" class="text-yellow-custom hover:underline" aria-label="GitHub - opens in a new tab">GitHub</a> &middot; <a href="https://x.com/deviorobert/" class="text-yellow-custom hover:underline" aria-label="Twitter - opens in a new tab">Twitter</a></p>
+    
+    
+</footer>
+
+</body>
+</html>

@@ -1,1 +1,147 @@
-Error: Template syntax error in templates/base.html at line 61: expected token 'end of statement block', got '='
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>5 Things I&#8217;ve learned building my first blocks for Gutenberg | Robert DeVore - Creative Thinker. Hustler. Web Developer Entrepreneur.</title>
+        <meta name="description" content="Robert is an opinionated developer who is building Stattic and CannaBiz Software, LLC.">
+        <meta name="keywords" content="SSG, Static Site Generator">
+        <meta name="author" content="Robert">
+    
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<!-- Skip Links for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#footer" class="skip-link">Skip to footer</a>
+
+<header class="bg-background shadow" id="navigation">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl quicksand-700"><a href="/" class="text-links">Robert DeVore</a></h2>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    
+                    <li><a href="/about/" class="text-primary hover:underline quicksand-700">About</a></li>
+                    
+                
+                    
+                    <li><a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a></li>
+                    
+                
+                    
+                    <li><a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a></li>
+                    
+                
+                    
+                    <li><a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">Plugins</a></li>
+                    
+                
+                    
+                    <li><a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a></li>
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
+    <article class="prose dark:prose-dark max-w-none">
+        <h1 class="text-6xl mb-4 text-links quicksand-700">5 Things I&#8217;ve learned building my first blocks for Gutenberg</h1>
+        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">May 14, 2018</span> &middot; <span class="author">Robert</span></p>
+        
+        <div class="stattic-content mb-12">
+            <p>Over the last few months I&#8217;ve watched as <a href="https://wordpress.org/gutenberg/" target="_blank" rel="noopener">Gutenberg</a> has been developed, silently taking notes, watching for patterns and possible areas to excel in.</p>
+<p>Then I found that the domain <a href="http://pillar.press" target="_blank" rel="noopener">Pillar.Press</a> was available and it snapped me into action.</p>
+<p>You see, for about 6 months I&#8217;ve had the name <strong>Pillar</strong> saved as a name idea for a headless WordPress theme I wanted to create.</p>
+<p>Last September, <a href="https://www.toddmotto.com" target="_blank" rel="noopener">Todd Motto</a> passed the <a href="https://github.com/html5blank/" target="_blank" rel="noopener">HTML5Blank</a> theme to me to take over development for.</p>
+<p>It hasn&#8217;t received much in the way of updates over the past few years, but it has a strong following.</p>
+<p>I&#8217;ve cleaned it up a bit and launched a new <a href="http://html5blank.com/" target="_blank" rel="noopener">landing page</a>, but it&#8217;s code is so far behind WordPress standards I figure a fresh start was needed.</p>
+<p>The plan was to use the name <strong>Pillar</strong> as the <em>&#8220;refreshed&#8221;</em> theme.</p>
+<p>Well, that&#8217;s got a new plan, because after a random search in <a href="https://namecheap.com" target="_blank" rel="noopener">Namecheap</a> showed the <strong>Pillar.Press</strong> domain was available, the <strong>Pillar</strong> name is now being used for the <a href="https://www.wordpress.org/plugins/pillar-press-content-blocks" target="_blank" rel="noopener">custom Gutenberg blocks</a> I&#8217;m building.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-1265" src="/images/banner-772x250.webp" alt="" width="940" height="305" /></p>
+<h3>Building Blocks with Pillar Press</h3>
+<p>If what they say is true, and <a href="https://wordpress.org/gutenberg/" target="_blank" rel="noopener">Gutenberg</a> is the future of WordPress, my hope is that <a href="http://pillar.press" target="_blank" rel="noopener">Pillar Press</a> becomes the cornerstone of content creation with WordPress.</p>
+<p>Since making the decision to use <a href="http://pillar.press" target="_blank" rel="noopener"><strong>Pillar Press</strong></a> as the name for my custom Gutenberg blocks solution, I&#8217;ve jumped in head first with all of the knowledge I&#8217;ve soaked up over the last few months.</p>
+<p>As a WordPress developer who&#8217;s lived in Windows for 20+ years, I&#8217;ve recently made the switch to Linux full time and I am extremely happy I have.</p>
+<p>I&#8217;ve learned a lot in these last few months, and feel that my skills as a developer have been growing at hyper-speed over the last few weeks while building <a href="https://www.wordpress.org/plugins/pillar-press-content-blocks" target="_blank" rel="noopener">my first blocks plugin</a>.</p>
+<p>What better way to celebrate becoming a better developer than by documenting what you&#8217;ve learned on a recent project?</p>
+<p>*Insert Usher Confessions GIF here*</p>
+<h2>How to use Node.js and NPM</h2>
+<p>While I&#8217;ve written a lot of code in my life, I&#8217;ve been weary of working with Node or NPM, composer, etc.</p>
+<p>Probably just the &#8220;if it ain&#8217;t broke don&#8217;t fix it&#8221; approach I had to my development for many years.</p>
+<p>So, this time around I&#8217;ve told myself that I&#8217;ll do whatever is needed to learn Node and NPM.</p>
+<p>The first thing I did was check to make sure I already had Node and NPM installed.</p>
+<p>In the command line, you can do that like this: <code>node -v</code> and <code>npm -v</code>.</p>
+<p>If you need to install either of them on Linux, you can do check out the official documentation to find the method to <a href="https://nodejs.org/en/download/package-manager/" target="_blank" rel="noopener">install via the package manager</a>.</p>
+<p>For Windows users, Treehouse has a nice write up on how you can <a href="https://treehouse.github.io/installation-guides/windows/node-windows.html" target="_blank" rel="noopener">install Node and NPM on Windows</a>.</p>
+<h2>How to use create-guten-block to build a Blocks plugin</h2>
+<p>If you do any serious work with WordPress and haven&#8217;t heard of Ahmad Awais, you need to catch up</p>
+<p>Ahmad first put out a <a href="https://github.com/ahmadawais/Gutenberg-Boilerplate" target="_blank" rel="noopener">Gutenberg Boilerplate</a>, then upgraded that to the <a href="https://github.com/ahmadawais/create-guten-block" target="_blank" rel="noopener">create-guten-block</a> solution for quickly building a Gutenberg Blocks plugin.</p>
+<p>Again, this type of development (command line) wasn&#8217;t something I&#8217;ve been 100% comfortable with, so this pushed me outside of my comfort zones.</p>
+<p>I&#8217;ve learned how to run <strong>NPM</strong> and figuring out how the build process worked, how to add a <strong>.gitignore</strong> file to a project in order to keep the <strong>node_modules</strong> folder from being sent to <a href="https://www.github.com/pillarpress/pillar-press-content-blocks" target="_blank" rel="noopener">Github</a>, and about a dozen other things.</p>
+<h2>The more I use Gutenberg, the more I like it</h2>
+<p>When I first seen <a href="https://wordpress.org/gutenberg/" target="_blank" rel="noopener">Gutenberg</a>, I hated it.</p>
+<p>I think my gut reaction was because of the fear that I&#8217;d have to learn something so far outside of my comfort zone as a developer.</p>
+<p>Over time, especially more recently as I&#8217;ve been developing for <a href="https://wordpress.org/plugins/gutenberg/" target="_blank" rel="noopener">Gutenberg</a>, I&#8217;ve come to actually like the new content editor for WordPress.</p>
+<p>There&#8217;s a learning curve, sure, but who cares?</p>
+<p>It&#8217;s coming to WordPress regardless of how you and I feel about having to learn something new in order to continue building plugins and themes with WordPress.</p>
+<p>I realized that if I hated it so bad, I&#8217;d have to go learn some new CMS anyways, so why not stick with what I&#8217;ve developed with for over a dozen years?</p>
+<p>That way of thinking is paying off.</p>
+<p>After browsing articles, then installing and actually getting my hands dirty with <a href="https://wordpress.org/plugins/gutenberg/" target="_blank" rel="noopener">Gutenberg</a>, I&#8217;ve found a hidden happiness when I tackle a new piece of code in a language I barely touched before, and quickly pick it up.</p>
+<p>The learning curve actually isn&#8217;t that bad &#8211; and again, this is coming from a Windows developer who didn&#8217;t do anything in a command line for almost all 20 years that I&#8217;ve been developing for the web.</p>
+<h2>Things are changing FAST with Gutenberg&#8217;s impending release</h2>
+<p>The first block I built was a <strong>Spacer block</strong>, because it seemed like the easiest one to start with since there was only one option &#8211; the height of the space between blocks.</p>
+<p>Well, in <a href="https://wordpress.org/plugins/gutenberg/" target="_blank" rel="noopener">Gutenberg v2.8</a> there is now a default <strong>Spacer block</strong> included.</p>
+<p>So, now I have the joy of removing the first block I built and the <a href="https://www.github.com/pillarpress/pillar-press-content-blocks" target="_blank" rel="noopener">Content Blocks plugin</a> it was a part of is left with one less block.</p>
+<p>But that&#8217;s part of the fun in it all, right?</p>
+<p>The constant change means that as a developer you and I have to constantly think about our next moves and what&#8217;s going to be best long-term.</p>
+<p>Another change that&#8217;s happening right now is the move of several components from <strong>wp.blocks</strong> to <strong>wp.editor</strong>.</p>
+<blockquote class="twitter-tweet" data-width="500" data-dnt="true">
+<p lang="en" dir="ltr">Important <a href="https://twitter.com/hashtag/Gutenberg?src=hash&amp;ref_src=twsrc%5Etfw">#Gutenberg</a> change: we moved several `wp.blocks.*` components to `wp.editor.*` (RichText, PlainText, MediaUpload, &#8230;). This will help us move forward with some blocking points we had like accessing state from blocks, more detailed explanation: <a href="https://t.co/cjMuB9088t">https://t.co/cjMuB9088t</a></p>
+<p>&mdash; Greg Ziółkowski (@gziolo) <a href="https://twitter.com/gziolo/status/993491209422295040?ref_src=twsrc%5Etfw">May 7, 2018</a></p></blockquote>
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>While not a huge change, it will cause problems for anyone who&#8217;s built a Gutenberg compatible plugin up to this point and has their components added the old way.</p>
+<p>And again, that&#8217;s the beauty of building alongside a plugin like Gutenberg, the constant change keeps you on your feet as a developer.</p>
+<p>Either that, or you fall miserably to your death in a pool of outdated skill-sets.</p>
+<div style="width: 100%; height: 0; padding-bottom: 55%; position: relative;"><iframe loading="lazy" class="giphy-embed" style="position: absolute;" src="https://giphy.com/embed/dnkTPFmjAxyUg" width="100%" height="100%" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+<p><a href="https://giphy.com/gifs/someone-gifgun-gifsquid-dnkTPFmjAxyUg"><small>via GIPHY</small></a></p>
+<h2>Final thoughts</h2>
+<p>I&#8217;m excited to see where Gutenberg goes over the next few months as it makes it&#8217;s way into WordPress core.</p>
+<p>I&#8217;m also excited to see <strong>Pillar Press</strong> grow into a powerful solution for WordPress users as they begin using Gutenberg.</p>
+<p><strong>What about you?</strong></p>
+<p>Have you started looking into Gutenberg yet and what you&#8217;ll do to upgrade your WordPress skills to work with it?</p>
+<p>Or are you on the side of the fence that hates Gutenberg and everything it stands for?</p>
+        </div>
+    </article>
+</main>
+
+
+<footer class="bg-background border-t border-primary mt-10 pt-12 pb-12 text-center text-sm" id="footer">
+    
+        <h4 class="text-yellow-custom text-2xl font-semibold mb-4">Let's Connect</h4>
+        <p>If you have questions or want to discuss custom development work, get in touch.</p>
+        <a href="/contact/" class="mt-6 px-6 py-2 bg-primary text-gray-900 font-semibold rounded-full hover:bg-yellow-500">Get in Touch</a>
+        <p class="mt-6">&copy; 1985-2024 Robert DeVore &middot; Get <a href="https://stattic.site/" target="_blank" class="text-links" aria-label="Stattic - opens in a new tab">Stattic</a> &middot; <a href="https://github.com/robertdevore/" class="text-yellow-custom hover:underline" aria-label="GitHub - opens in a new tab">GitHub</a> &middot; <a href="https://x.com/deviorobert/" class="text-yellow-custom hover:underline" aria-label="Twitter - opens in a new tab">Twitter</a></p>
+    
+    
+</footer>
+
+</body>
+</html>

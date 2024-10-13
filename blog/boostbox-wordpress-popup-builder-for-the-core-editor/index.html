@@ -1,1 +1,368 @@
-Error: Template syntax error in templates/base.html at line 61: expected token 'end of statement block', got '='
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>Introducing BoostBox: The 1st WordPress popup builder for the core editor | Robert DeVore - Creative Thinker. Hustler. Web Developer Entrepreneur.</title>
+        <meta name="description" content="Robert is an opinionated developer who is building Stattic and CannaBiz Software, LLC.">
+        <meta name="keywords" content="SSG, Static Site Generator">
+        <meta name="author" content="Robert">
+    
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<!-- Skip Links for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#footer" class="skip-link">Skip to footer</a>
+
+<header class="bg-background shadow" id="navigation">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl quicksand-700"><a href="/" class="text-links">Robert DeVore</a></h2>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    
+                    <li><a href="/about/" class="text-primary hover:underline quicksand-700">About</a></li>
+                    
+                
+                    
+                    <li><a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a></li>
+                    
+                
+                    
+                    <li><a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a></li>
+                    
+                
+                    
+                    <li><a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">Plugins</a></li>
+                    
+                
+                    
+                    <li><a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a></li>
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
+    <article class="prose dark:prose-dark max-w-none">
+        <h1 class="text-6xl mb-4 text-links quicksand-700">Introducing BoostBox: The 1st WordPress popup builder for the core editor</h1>
+        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Jan 11, 2024</span> &middot; <span class="author">Robert</span></p>
+        
+        <div class="stattic-content mb-12">
+            <p>What better way to start off the year than to release a free WordPress plugin that lets you design your popups using the core WordPress editor?</p>
+
+<p>That&#8217;s exactly what I&#8217;m doing today &#8211; say hello to <a href="https://wordpress.org/plugins/boostbox/">BoostBox</a> 😎</p>
+
+<p>Whether you and I like or not, WordPress has gone FSE and it&#8217;s not going back to <em>&#8220;the good ol&#8217; days&#8221;</em>.</p>
+
+<p>Nor should it.</p>
+
+<p>WordPress feels different than it did 10 years ago, but we <strong><em>all</em></strong> should feel different than we did a decade ago 🤷‍♂️</p>
+
+<p>So to honor that change, I&#8217;ve been looking at ways to jump into FSE. </p>
+
+<p>This plugin is my first real deep dive into how the new core editor can be used outside of regular post or page content.</p>
+
+<p>The BoostBox plugin embraces the FSE experience in WordPress by letting you build your popups with the core editor.</p>
+
+<figure class="wp-block-image alignwide size-full"><a href="https://wordpress.org/plugins/boostbox/" target="_blank" rel="noreferrer noopener"><img loading="lazy" decoding="async" width="940" height="305" src="/images/banner-772x250-1.webp" alt="" class="wp-image-10332" srcset="/images/banner-772x250-1.webp 940w, /images/banner-772x250-1-300x97.webp 300w, /images/banner-772x250-1-768x249.webp 768w" sizes="(max-width: 940px) 100vw, 940px" /></a></figure>
+
+<h2 class="wp-block-heading">Why build <em>another popup plugin</em> for WordPress?</h2>
+
+<p>I started to build BoostBox over a year ago because I knew the popup builders in WordPress were good, but they also feel archaic when compared to what WP looks like today. </p>
+
+<p>I felt like something that embraced the new core editor would be a breath of fresh air &#8211; and it is.</p>
+
+<p>The <a href="https://wordpress.org/plugins/boostbox/">BoostBox</a> plugin lets you design popup content with the core WordPress editor just like you would create any other pieces of content for your site.</p>
+
+<p>The goal was to build a forward thinking popup plugin for WordPress that didn&#8217;t require you to learn a whole new design system in order to create your popups.</p>
+
+<p>The road to get here took longer than I hoped, and I had hurdles to get over (<a href="https://twitter.com/deviorobert/status/1743037062964478228" target="_blank" rel="noreferrer noopener">Twitter thread</a>), but it&#8217;s across the finish line now so I will celebrate the win.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="480" height="260" src="/images/giphy-1324.webp" alt="" class="wp-image-10354"/><figcaption class="wp-element-caption">Mission Accomplished</figcaption></figure>
+
+<p>Now, lets take a look at how the plugin actually works under the hood.</p>
+
+<h2 class="wp-block-heading">BoostBox Admin Settings</h2>
+
+<p>When you activate the BoostBox plugin you will be automatically redirected to the settings page. </p>
+
+<p>Here is a screenshot of how the settings page looks as of version 1.2.0</p>
+
+<figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="562" src="/images/boostbox-popup-plugin-for-wordpress-settings-screenshot-1024x562.webp" alt="" class="wp-image-10342" srcset="/images/boostbox-popup-plugin-for-wordpress-settings-screenshot-1024x562.webp 1024w, /images/boostbox-popup-plugin-for-wordpress-settings-screenshot-300x165.webp 300w, /images/boostbox-popup-plugin-for-wordpress-settings-screenshot-768x421.webp 768w, /images/boostbox-popup-plugin-for-wordpress-settings-screenshot-1536x843.webp 1536w, /images/boostbox-popup-plugin-for-wordpress-settings-screenshot.webp 1883w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+<p>You can select a popup that will be used whenever the global popup option is selected in the popup display settings.</p>
+
+<p>You are also able to set the amount of days that a cookie is stored when the user closes a popup.</p>
+
+<h2 class="wp-block-heading">Popup Display Settings</h2>
+
+<p>When you&#8217;re creating your popups, there&#8217;s a variety of options included in the display settings to help you customize how your popups show on the frontend.</p>
+
+<figure class="wp-block-image alignwide size-large"><img loading="lazy" decoding="async" width="1024" height="132" src="/images/boostbox-popup-plugin-display-settings-1024x132.webp" alt="" class="wp-image-10356" srcset="/images/boostbox-popup-plugin-display-settings-1024x132.webp 1024w, /images/boostbox-popup-plugin-display-settings-300x39.webp 300w, /images/boostbox-popup-plugin-display-settings-768x99.webp 768w, /images/boostbox-popup-plugin-display-settings-1536x199.webp 1536w, /images/boostbox-popup-plugin-display-settings-2048x265.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+<p>As you&#8217;ll see in the example GIF&#8217;s further down this page, these settings let you change a variety of display options for your popup.</p>
+
+<p><strong>Trigger Types</strong></p>
+
+<ul class="wp-block-list">
+<li>Auto open</li>
+
+
+
+<li>On scroll</li>
+
+
+
+<li>Time</li>
+</ul>
+
+<p><strong>Animation Types</strong></p>
+
+<ul class="wp-block-list">
+<li>Fade in</li>
+
+
+
+<li>Slide down</li>
+
+
+
+<li>Slide up</li>
+
+
+
+<li>Slide left</li>
+
+
+
+<li>Slide right</li>
+
+
+
+<li>Pop swirl</li>
+
+
+
+<li>Anvil</li>
+</ul>
+
+<p>Display location</p>
+
+<ul class="wp-block-list">
+<li>Top left</li>
+
+
+
+<li>Top center</li>
+
+
+
+<li>Top right</li>
+
+
+
+<li>Center left</li>
+
+
+
+<li>Center center</li>
+
+
+
+<li>Center right</li>
+
+
+
+<li>Bottom left</li>
+
+
+
+<li>Bottom center</li>
+
+
+
+<li>Bottom right</li>
+</ul>
+
+<p>You can also change the animation speed, display speed, set a custom max-width and choose a custom color for the close icon.</p>
+
+<h2 class="wp-block-heading">BoostBox Popup Settings</h2>
+
+<p>When you are creating new content, from blog posts to pages and custom post types, you can choose which popup is displayed (if any).</p>
+
+<p>This is done in the BoostBox Settings metabox that is added to all post types on your site.</p>
+
+<p>For instance, you can choose to disable it, display the global popup or choose a specific popup.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="560" height="320" src="/images/boostbox-popup-plugin-settings-popup-display.webp" alt="" class="wp-image-10343"/></figure>
+
+<p>So if you have a global popup displaying across your website, but also built a landing page that needs it&#8217;s own unique popup to be used instead, you can do that with <a href="https://wordpress.org/plugins/boostbox/" target="_blank" rel="noreferrer noopener">BoostBox</a>.</p>
+
+<p>Or maybe you have a contact popup that you want to disable on the actual contact page.</p>
+
+<p>You get the idea &#8211; endless possibilities.</p>
+
+<h2 class="wp-block-heading">BoostBox works great with your favorite FSE WordPress theme</h2>
+
+<p>When I was testing the plugin I wanted to see how it works with a handful of different FSE WordPress themes.</p>
+
+<p>This was done in part to make sure that it was versatile enough to work on all of them, but also to see how cool it looked using patterns from the themes as popups 😎</p>
+
+<p>Below I&#8217;ve showcased a few themes and their included patterns used as popups to demonstrate the versatility of the BoostBox popup plugin when combined with beautifully crafted patterns.</p>
+
+<h3 class="wp-block-heading">Ollie + BoostBox</h3>
+
+<p>I recently built a new secret project with the <a href="https://olliewp.com" target="_blank" rel="noreferrer noopener">Ollie theme</a> and it&#8217;s everything you would want in a WordPress theme, and more. </p>
+
+<p>It&#8217;s my go-to FSE theme and I doubt that&#8217;s gonna change anytime soon, so it&#8217;s only right that it&#8217;s the first theme I tested <strong>BoostBox</strong> with.</p>
+
+<p>You can use a testimonial popup to show social proof for your product, business or service. This one that&#8217;s included in the OllieWP theme looks great.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/ollie-theme-boostbox-popup-plugin-example-1.webp" alt="" class="wp-image-10322"/><figcaption class="wp-element-caption">Example popup using the Pop Swirl effect</figcaption></figure>
+
+<p>For the product builders out there, you can use a pattern like the one below to showcase a product like Ollie does, and offer a download CTA to your visitors.</p>
+
+<p>Oh, and with the Ollie theme you can definitely do it in style 💯</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/ollie-theme-boostbox-popup-plugin-example-2.webp" alt="" class="wp-image-10323"/><figcaption class="wp-element-caption">Example popup using the Fade In effect</figcaption></figure>
+
+<p>Not only can you add popups to display in the center of the screen like the above examples, you can place a full width pattern at the bottom of the screen.</p>
+
+<p>Slide the popup in and you&#8217;ve got a beautiful CTA bar for your site.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/ollie-theme-boostbox-popup-plugin-example-3.webp" alt="" class="wp-image-10324"/><figcaption class="wp-element-caption">Example popup using the slide up effect</figcaption></figure>
+
+<p>And rounding out the examples while using the Ollie theme is the following popup that&#8217;s using the Anvil effect to display.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/ollie-theme-boostbox-popup-plugin-example-4.webp" alt="" class="wp-image-10325"/><figcaption class="wp-element-caption">Example popup using the Anvil effect</figcaption></figure>
+
+<h3 class="wp-block-heading">Powder + BoostBox</h3>
+
+<p>If you have been in the WordPress space for more than 5 minutes I&#8217;m sure you&#8217;ve heard of <a href="https://briangardner.com">Brian Gardner</a>. If not, shame on you 🤦</p>
+
+<p>I use his <a href="https://frostwp.com" target="_blank" rel="noreferrer noopener">Frost</a> theme on this website because he released it before the <a href="https://briangardner.com/themes/powder/" target="_blank" rel="noreferrer noopener">Powder theme</a>.</p>
+
+<p>And since I haven&#8217;t had the chance to use the Powder theme yet, this gave me a perfect opportunity to test it out.</p>
+
+<p>First, lets see what the BoostBox plugin can do for this popular slide in popup effect on the bottom right corner of the site.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/powder-theme-boostbox-popup-plugin-example-1.webp" alt="" class="wp-image-10326"/><figcaption class="wp-element-caption">Example popup using the Slide Left effect</figcaption></figure>
+
+<p>Next, lets see how a pattern that&#8217;s included with the Powder theme looks as a simple fade in popup.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/powder-theme-boostbox-popup-plugin-example-2.webp" alt="" class="wp-image-10327"/><figcaption class="wp-element-caption">Example popup using the Fade In effect</figcaption></figure>
+
+<p>Now we can change the colors of the popup easily within the core editor, change the effect to anvil and see a completely unique popup.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/powder-theme-boostbox-popup-plugin-example-3.webp" alt="" class="wp-image-10328"/><figcaption class="wp-element-caption">Example popup using the Anvil effect</figcaption></figure>
+
+<h3 class="wp-block-heading">Kadence + BoostBox</h3>
+
+<p>I&#8217;ve been using the <a href="https://www.kadencewp.com/" target="_blank" rel="noreferrer noopener">Kadence</a> WordPress theme for the <a href="https://cannabiz.software/">CannaBiz Software</a> website build and it&#8217;s been a great FSE theme to work with.</p>
+
+<p>Kadence also has a <a href="https://www.kadencewp.com/introducing-the-innovative-kadence-design-library-revolutionizing-the-world-of-design-patterns/" target="_blank" rel="noreferrer noopener">design library</a> with a ton of patterns to choose from, so I knew it would be a good theme to use during the testing phase.</p>
+
+<p>First, lets see how a popup looks with a video player included &#8211; spoiler alert: it looks great 😎</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/kadence-theme-boostbox-popup-plugin-example-1.webp" alt="" class="wp-image-10329"/><figcaption class="wp-element-caption">Example popup using the Fade in effect</figcaption></figure>
+
+<p>Next we change the popup to a subscription form that slides into view. Here&#8217;s a GIF example that&#8217;s smoother than JIF 💯</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/kadence-theme-boostbox-popup-plugin-example-2.webp" alt="" class="wp-image-10330"/><figcaption class="wp-element-caption">Example popup using the Slide Left effect</figcaption></figure>
+
+<p>And last up for the Kadence examples is a contact form that grabs your attention with the Pop Swirl effect.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/kadence-theme-boostbox-popup-plugin-example-3.webp" alt="" class="wp-image-10331"/><figcaption class="wp-element-caption">Example popup using the Pop Swirl effect</figcaption></figure>
+
+<h3 class="wp-block-heading">Twenty Twenty-Four + BoostBox</h3>
+
+<p>How could I show examples of FSE themes using the <a href="https://wordpress.org/plugins/boostbox/" target="_blank" rel="noreferrer noopener">BoostBox</a> popup plugin and not include the <a href="https://wordpress.org/themes/twentytwentyfour/" target="_blank" rel="noreferrer noopener">Twenty Twenty-Four</a> theme?</p>
+
+<p>It&#8217;s the current default theme in WordPress and another great example of what can be done with WordPress in 2024 (and beyond).</p>
+
+<p>Here&#8217;s a slide down effect that puts a CTA about your newsletter right in front of the reader.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/twenty-twenty-four-theme-boostbox-popup-plugin-example-3.webp" alt="" class="wp-image-10336"/><figcaption class="wp-element-caption">Example popup using the Slide Down effect</figcaption></figure>
+
+<p>Another example of how BoostBox looks while using included patterns is this fun slide in effect 😎</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/twenty-twenty-four-theme-boostbox-popup-plugin-example-2.webp" alt="" class="wp-image-10337"/><figcaption class="wp-element-caption">Example popup using the Slide Right effect</figcaption></figure>
+
+<p>And rounding out the examples for the Twenty Twenty-Four theme is a popup that utilizes the Pop Swirl effect and an included pattern from the theme.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="800" height="414" src="/images/twenty-twenty-four-theme-boostbox-popup-plugin-example-1.webp" alt="" class="wp-image-10338"/><figcaption class="wp-element-caption">Example popup using the Pop Swirl effect</figcaption></figure>
+
+<h2 class="wp-block-heading">Download the BoostBox plugin</h2>
+
+<p>You can get the plugin from the WordPress directory (<a href="https://wordpress.org/plugins/boostbox/" target="_blank" rel="noreferrer noopener">BoostBox WordPress Plugin</a>) or by searching for &#8220;BoostBox&#8221; in your admin dashboard.</p>
+
+<p>Version 1.2 was just released and is ready to download and use right now.</p>
+
+<p>Check it out and let me know what you think in the comments or on <a href="https://x.com/deviorobert">Twitter</a> (that&#8217;s right, I don&#8217;t wanna call it X).</p>
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://downloads.wordpress.org/plugin/boostbox.latest-stable.zip" target="_blank" rel="noreferrer noopener">Download Now</a></div>
+
+</div>
+
+<h2 class="wp-block-heading">What&#8217;s next?</h2>
+
+<p>For me, this is a beautiful way to begin 2024. </p>
+
+<p>After a rollercoaster year in 2023, I&#8217;m finding my groove again and this plugin is only the beginning.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="498" height="280" src="/images/im-married-to-this-game-this-is-my-game.webp" alt="" class="wp-image-10341"/><figcaption class="wp-element-caption">#NeverNotWorking</figcaption></figure>
+
+<p>I&#8217;ve already got a todo list for the free version&#8217;s next release. </p>
+
+<p>I&#8217;ve also got immediate plans for a pro version of the plugin that will extend it in a variety of ways.</p>
+
+<p>There will be additional trigger types and animation types, metrics (views, conversions, etc), custom patterns and more.</p>
+
+<p>I&#8217;m working on the code for the pro plugin while writing these release notes, so you can expect to see the pro version pretty soon 😎</p>
+
+<p>Beyond the BoostBox plugin I&#8217;ve also got another new plugin in queue to be added to the WordPress plugin directory. </p>
+
+<p>More on that once it&#8217;s been approved.</p>
+
+<p>And if you haven&#8217;t been <a href="https://twitter.com/deviorobert/status/1740106853277950449" target="_blank" rel="noreferrer noopener">following</a> <a href="https://twitter.com/deviorobert/status/1701961960697319481" target="_blank" rel="noreferrer noopener">along</a> <a href="https://twitter.com/deviorobert/status/1688538188501975040" target="_blank" rel="noreferrer noopener">on</a> <a href="https://twitter.com/deviorobert/status/1724434588821234177" target="_blank" rel="noreferrer noopener">Twitter</a>, I just got my 4th CVE via <a href="https://patchstack.com/database/researcher/770fb791-e511-4ce8-8c93-c3f912d443df" target="_blank" rel="noreferrer noopener">Patchstack</a>.</p>
+
+<p>2024 will be a year where I step up my efforts in this area. I&#8217;ve already got a new vulernability that is ready to submit, so I&#8217;m off to a good start.</p>
+
+<p>Here&#8217;s to more laughs, more love and more money in 2024 💰</p>
+        </div>
+    </article>
+</main>
+
+
+<footer class="bg-background border-t border-primary mt-10 pt-12 pb-12 text-center text-sm" id="footer">
+    
+        <h4 class="text-yellow-custom text-2xl font-semibold mb-4">Let's Connect</h4>
+        <p>If you have questions or want to discuss custom development work, get in touch.</p>
+        <a href="/contact/" class="mt-6 px-6 py-2 bg-primary text-gray-900 font-semibold rounded-full hover:bg-yellow-500">Get in Touch</a>
+        <p class="mt-6">&copy; 1985-2024 Robert DeVore &middot; Get <a href="https://stattic.site/" target="_blank" class="text-links" aria-label="Stattic - opens in a new tab">Stattic</a> &middot; <a href="https://github.com/robertdevore/" class="text-yellow-custom hover:underline" aria-label="GitHub - opens in a new tab">GitHub</a> &middot; <a href="https://x.com/deviorobert/" class="text-yellow-custom hover:underline" aria-label="Twitter - opens in a new tab">Twitter</a></p>
+    
+    
+</footer>
+
+</body>
+</html>

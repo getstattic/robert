@@ -1,1 +1,181 @@
-Error: Template syntax error in templates/base.html at line 61: expected token 'end of statement block', got '='
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>WordPress plugin with 5M+ active installs can be utilized in DDoS attacks | Robert DeVore - Creative Thinker. Hustler. Web Developer Entrepreneur.</title>
+        <meta name="description" content="Robert is an opinionated developer who is building Stattic and CannaBiz Software, LLC.">
+        <meta name="keywords" content="SSG, Static Site Generator">
+        <meta name="author" content="Robert">
+    
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<!-- Skip Links for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#footer" class="skip-link">Skip to footer</a>
+
+<header class="bg-background shadow" id="navigation">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl quicksand-700"><a href="/" class="text-links">Robert DeVore</a></h2>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    
+                    <li><a href="/about/" class="text-primary hover:underline quicksand-700">About</a></li>
+                    
+                
+                    
+                    <li><a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a></li>
+                    
+                
+                    
+                    <li><a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a></li>
+                    
+                
+                    
+                    <li><a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">Plugins</a></li>
+                    
+                
+                    
+                    <li><a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a></li>
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
+    <article class="prose dark:prose-dark max-w-none">
+        <h1 class="text-6xl mb-4 text-links quicksand-700">WordPress plugin with 5M+ active installs can be utilized in DDoS attacks</h1>
+        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Sep 30, 2023</span> &middot; <span class="author">Robert</span></p>
+        
+        <div class="stattic-content mb-12">
+            <p>While doing some vulnerability research for WordPress plugins myself and my clients use, I came across a plugin with 5M+ active installs that can be used in DDoS attacks by non-authenticated users.</p>
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Let me preface this to say that the plugin itself is not vulnerable to a hack AFAIK, but has a flaw (IMO) that allows non-authenticated users to trigger full site backups without any limitations.</p>
+</blockquote>
+
+<p>The plugin in question is <a href="https://wordpress.org/plugins/all-in-one-wp-migration/" target="_blank" rel="noreferrer noopener nofollow">All In One WP Migration</a> from <a href="https://servmask.com" target="_blank" rel="noreferrer noopener">ServMask</a>.</p>
+
+<p>I submitted this vulnerability to <a href="https://patchstack.com" target="_blank" rel="noreferrer noopener">Patchstack</a> but it was rejected because it requires a secondary vulnerability. </p>
+
+<p>I also reached out to ServMask support back in early July and discussed this issue with them.</p>
+
+<p>Their first response said it wasn&#8217;t a big deal 🤔</p>
+
+<p>Then I had a few follow ups with their CTO Bobby Angelov, who said he&#8217;d talk to the team and look into it, but I never received any follow up.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="498" height="413" src="/images/ghosted-ignored.webp" alt="Ghosted GIF" class="wp-image-9536"/></figure>
+
+<h2 class="wp-block-heading">How the exploit works</h2>
+
+<p>The scenario I&#8217;m talking about is if someone uses a secondary exploit (like&nbsp;<a href="https://www.exploit-db.com/exploits/50052" target="_blank" rel="noreferrer noopener">this one</a>)&nbsp; to read the <code>wp_options</code> table. </p>
+
+<p>Or as Snicco <a href="https://snicco.io/vulnerability-disclosure/malcare/site-takeover-through-stolen-api-credentials-in-combination-with-sqli-malcare-5-09#description" target="_blank" rel="noreferrer noopener">pointed out</a> recently:</p>
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>This is exploitable&nbsp;<strong>if</strong>&nbsp;<strong>any of the below pre-conditions are given</strong>:</p>
+
+
+
+<ul class="wp-block-list">
+<li>The site has one of the&nbsp;<a href="https://patchstack.com/database/">never-ending read-SQLi vulnerabilities</a>&nbsp;in any plugin, theme, or WordPress Core.&nbsp;<a href="https://webdesigneracademy.com/my-stripe-account-was-hacked-and-stripe-said-i-have-to-repay-70k/">This recently happened with WooCommerce Stripe keys</a>.</li>
+
+
+
+<li>The&nbsp;<a href="https://aboutus.godaddy.net/newsroom/company-news/news-details/2021/GoDaddy-Announces-Security-Incident-Affecting-Managed-WordPress-Service/default.aspx?fbclid=IwAR2zz6g0XEpSl5pGkNfe3GOhEXFgE-XRIyQVDFIMOvKqBs3AVfsIXHflmrg">site’s database is compromised at the hosting level</a>.</li>
+
+
+
+<li>Other methods that allow reading or updating WordPress options (wp_options), such as this&nbsp;<a href="https://patchstack.com/database/vulnerability/elementor-pro/wordpress-elementor-pro-3-11-6-authenticated-arbitrary-options-change-vulnerability">wildly exploited Elementor vulnerability</a>.</li>
+</ul>
+</blockquote>
+
+<p>Using one of the above methods, the attacker could grab the <code>ai1wm_secret_key</code> that AIOWPM uses and trigger a backup without ever logging into the site.</p>
+
+<p>This keeps their exploit stealthy compared to adding a user that may get spotted by a website owner/maintenance company.</p>
+
+<p>Once the user has the key, they can send request to this URL:</p>
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><strong>http://VICTIMSITE.com/wp-admin/admin-ajax.php?action=ai1wm_export&amp;ai1wm_import=1&amp;secret_key=SECRET_KEY_HERE&amp;complete=1</strong></p>
+</blockquote>
+
+<p>Doing this, while logged out, will trigger a full backup of the website, which in a lot of cases will be 2GB+ (think photographer sites or food blogs with lots of images).</p>
+
+<p>By having this capability, as an attacker I would be able to trigger a DDoS attack on the site by simply creating a python script that requests the URL 100+ times consecutively.</p>
+
+<p>I did this already, and it took ~30 minutes to create (no, I won&#8217;t share this script so don&#8217;t ask).</p>
+
+<p>That will overload the server resources both from a disk space perspective, as well as resources being brought to a halt trying to generate backups of the site 100+ times.</p>
+
+<p>For reference, the&nbsp;<a href="https://cln.sh/Fh8xbzg7h5vpSK0y0kjT" target="_blank" rel="noreferrer noopener">second largest</a>&nbsp;managed hosting plan from WPEngine allows for 50GB of space. That means 25 requests on a 2GB website is going to max it out.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="480" height="270" src="/images/maxed-out-workaholics-adam.webp" alt="Maxed out Workaholics GIF" class="wp-image-9527"/><figcaption class="wp-element-caption">That&#8217;s gonna hurt 👀</figcaption></figure>
+
+<h2 class="wp-block-heading">Recommendation to mitigate this issue</h2>
+
+<p>This isn&#8217;t 100% the AIOWPM plugin&#8217;s issue since it <em>does</em> require a secondary exploit.</p>
+
+<p>But since there are active exploits in the wild that give access to the secret key, I believe that it&#8217;s worth hardening this functionality.</p>
+
+<p>A quick solution would be to limit the amount of backups that can be created per X minutes.</p>
+
+<p>Doing this would help mitigate the risk since it would likely give the website owners and the hosting companies time to notice backups being generated and disk space filling up.</p>
+
+<p>It would also limit the likelihood that the DDoS would bring the website down from overwhelming it with continuous requests.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="480" height="265" src="/images/its-not-that-hard.webp" alt="" class="wp-image-9543"/></figure>
+
+<p>Another option would be to update the plugin with an option to email the website owner any time a backup is generated. This could be activated by default, but turned off in the settings if the website owner understood the risks and didn&#8217;t want the email(s) sent.</p>
+
+<p>Having an email sent like this means as soon as an attacker triggers the backup the owner gets notified and can take appropriate actions.</p>
+
+<h2 class="wp-block-heading">My Recommendations for users</h2>
+
+<p>If you&#8217;re using this plugin, my recommendation would be to stop immediately and find an alternative solution for backups.</p>
+
+<p>Most reputable hosts like <a href="https://wpengine.com" target="_blank" rel="noreferrer noopener">WPEngine</a>, <a href="https://pagely.com" target="_blank" rel="noreferrer noopener">Pagely</a>, <a href="https://pressable.com">Pressable</a> and others offer daily and on-demand backups. </p>
+
+<p>And beyond hosting companies, other solutions like <a href="https://blogvault.com">Blogvault</a> also offer backups, so you have many other (better) options for backups than this plugin.</p>
+
+<p><strong>Again just to make sure it&#8217;s clear: keeping the All In One WP Migration plugin active on your site does not immediately make you vulnerable to this type of attack.</strong> </p>
+
+<p>But depending on the rest of your website&#8217;s setup, you may just be playing with fire by keeping it active.</p>
+
+<figure class="wp-block-image aligncenter size-full"><img loading="lazy" decoding="async" width="480" height="269" src="/images/better-safe-than-sorry.webp" alt="" class="wp-image-9537"/></figure>
+        </div>
+    </article>
+</main>
+
+
+<footer class="bg-background border-t border-primary mt-10 pt-12 pb-12 text-center text-sm" id="footer">
+    
+        <h4 class="text-yellow-custom text-2xl font-semibold mb-4">Let's Connect</h4>
+        <p>If you have questions or want to discuss custom development work, get in touch.</p>
+        <a href="/contact/" class="mt-6 px-6 py-2 bg-primary text-gray-900 font-semibold rounded-full hover:bg-yellow-500">Get in Touch</a>
+        <p class="mt-6">&copy; 1985-2024 Robert DeVore &middot; Get <a href="https://stattic.site/" target="_blank" class="text-links" aria-label="Stattic - opens in a new tab">Stattic</a> &middot; <a href="https://github.com/robertdevore/" class="text-yellow-custom hover:underline" aria-label="GitHub - opens in a new tab">GitHub</a> &middot; <a href="https://x.com/deviorobert/" class="text-yellow-custom hover:underline" aria-label="Twitter - opens in a new tab">Twitter</a></p>
+    
+    
+</footer>
+
+</body>
+</html>

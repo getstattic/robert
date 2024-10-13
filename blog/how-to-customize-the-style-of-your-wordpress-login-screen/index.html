@@ -1,1 +1,309 @@
-Error: Template syntax error in templates/base.html at line 61: expected token 'end of statement block', got '='
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+        <title>How to customize the style of your WordPress login screen | Robert DeVore - Creative Thinker. Hustler. Web Developer Entrepreneur.</title>
+        <meta name="description" content="Robert is an opinionated developer who is building Stattic and CannaBiz Software, LLC.">
+        <meta name="keywords" content="SSG, Static Site Generator">
+        <meta name="author" content="Robert">
+    
+
+    <link href="/assets/css/tailwind.min.css" rel="stylesheet preload" as="style">
+    
+        <link href="/assets/css/main.min.css" rel="stylesheet preload" as="style">
+    
+
+    <!-- Alpine.js for interactive components -->
+    <script src="/assets/js/alpine.min.js" defer></script>
+</head>
+<body class="bg-background text-primary quicksand-300">
+
+<!-- Skip Links for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#footer" class="skip-link">Skip to footer</a>
+
+<header class="bg-background shadow" id="navigation">
+    <div class="container max-w-screen-xl m-auto py-6 px-4 flex justify-between">
+        <h2 class="text-3xl quicksand-700"><a href="/" class="text-links">Robert DeVore</a></h2>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="flex space-x-6">
+                
+                    
+                    <li><a href="/about/" class="text-primary hover:underline quicksand-700">About</a></li>
+                    
+                
+                    
+                    <li><a href="/blog/" class="text-primary hover:underline quicksand-700">Blog</a></li>
+                    
+                
+                    
+                    <li><a href="/projects/" class="text-primary hover:underline quicksand-700">Projects</a></li>
+                    
+                
+                    
+                    <li><a href="/wordpress-and-woocommerce-plugins/" class="text-primary hover:underline quicksand-700">Plugins</a></li>
+                    
+                
+                    
+                    <li><a href="/contact/" class="text-primary hover:underline quicksand-700">Contact</a></li>
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container max-w-2xl m-auto py-10 px-4" id="main-content">
+    <article class="prose dark:prose-dark max-w-none">
+        <h1 class="text-6xl mb-4 text-links quicksand-700">How to customize the style of your WordPress login screen</h1>
+        <p class="text-2md post-meta mb-4 pb-2 text-accent italic border-b border-primary"><span class="date">Jun 27, 2019</span> &middot; <span class="author">Robert</span></p>
+        
+        <div class="stattic-content mb-12">
+            <p>This post is going to show you how to add a few small code snippets to change the appearance of the WordPress login screen.</p>
+
+<p>We&#8217;ll walk through the process of changing the default WordPress logo to your own using the <code>login_headertext</code> filter that was added in WordPress 5.2</p>
+
+<p>And I&#8217;m going to break down how to change various other styles, giving you the ability to style your login screens to match your website branding.</p>
+
+<p>I was recently working on the registration flow of WP Dispensary&#8217;s <a href="https://www.wpdispensary.com/product/ecommerce">eCommerce add-on</a> and realized there&#8217;s a few places that the default WordPress login page are lacking from a branding perspective.</p>
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="800" height="622" src="/images/wp-login-default-screen.webp" alt="" class="wp-image-2749" srcset="/images/wp-login-default-screen.webp 800w, /images/wp-login-default-screen-300x233.webp 300w, /images/wp-login-default-screen-768x597.webp 768w" sizes="(max-width: 800px) 100vw, 800px" /></figure>
+
+<p>So I decided I had to change that.</p>
+
+<p>Since the <a href="http://robertdevore.com/cannabiz/">CannaBiz</a> theme I built for <a href="https://www.wpdispensary.com/">WP Dispensary</a> already has areas in the Customizer for the logo upload and multiple color styles, I knew it wouldn&#8217;t be too hard to update the login page style to match the front-end design.</p>
+
+<p>Previous to WordPress version 5.2, the most common way to change the logo on the login screen was with CSS style updates to display yours properly.</p>
+
+<p>These codes can be found in the Codex which shows you <a href="https://codex.wordpress.org/Customizing_the_Login_Form">how to customize the login form</a>.</p>
+
+<p>With WordPress v5.2 we can now use the newly added <code>logo_headertext</code> filter in the <code>wp-login.php</code> file to display your logo image.</p>
+
+<p>Here&#8217;s an example of what you can do with the updated login screen style for WordPress.</p>
+
+<figure class="wp-block-image"><img loading="lazy" decoding="async" width="800" height="622" src="/images/cannabiz-login-screen-wp-dispensary.webp" alt="" class="wp-image-2752" srcset="/images/cannabiz-login-screen-wp-dispensary.webp 800w, /images/cannabiz-login-screen-wp-dispensary-300x233.webp 300w, /images/cannabiz-login-screen-wp-dispensary-768x597.webp 768w" sizes="(max-width: 800px) 100vw, 800px" /></figure>
+
+<h3 class="wp-block-heading">Using the new filter added in WP v5.2</h3>
+
+<p>You can find the <code>logo_headertext</code> filter in the <strong>wp-login.php</strong> file in your website&#8217;s root directory.</p>
+
+<p>We&#8217;ll be looking for this bit of code below.</p>
+
+<div class="snippetcpt-wrap" id="snippet-2753" data-id="2753" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2753" data-fullscreen="https://robertdevore.com/code-snippets/wp-login-php-filter/?full-screen=1">
+                <pre class="prettyprint linenums lang-php" title="wp-login.php filter">&lt;?php
+  /**
+ * Filters the link text of the header logo above the login form.
+ *
+ * @since 5.2.0
+ *
+ * @param string $login_header_text The login header logo link text.
+ */
+$login_header_text = apply_filters( 'login_headertext', $login_header_text );</pre>
+            </div>
+
+<p>You can also view the full <strong>wp-login.php</strong> file on Github at the following <a href="https://github.com/WordPress/WordPress/blob/master/wp-login.php">link</a>. </p>
+
+<h3 class="wp-block-heading">Adding your logo with a custom filter</h3>
+
+<p>Now that we found the filter, let&#8217;s add some code to change out the WordPress logo and replace it with an image of our own.</p>
+
+<p>These changes will go in your theme <strong>functions.php</strong> file (or a custom plugin).</p>
+
+<div class="snippetcpt-wrap" id="snippet-2754" data-id="2754" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2754" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image/?full-screen=1">
+                <pre class="prettyprint linenums lang-php" title="acme_login_logo_image">&lt;?php
+/**
+ * Custom login form logo link title.
+ * 
+ * Requires WordPress v5.2+ in order to use the login_headertext filter
+ */
+function acme_login_logo_image( $login_header_text ) {
+
+    $logo_url          = 'YOUR_IMAGE_URL_HERE';
+
+    $login_header_text = ''; // clears default output.
+    $login_header_text = '&lt;img src=&quot;' . $logo_url . '&quot; alt=&quot;' . get_bloginfo( 'title' ) . '&quot; /&gt;';
+
+    return $login_header_text;
+
+}
+add_filter( 'login_headertext', 'acme_login_logo_image' );
+</pre>
+            </div>
+
+<p>Next, we&#8217;re going to want to remove the default CSS styles that WordPress applies to the logo image so ours new logo fits properly within the space and re-sizes automatically depending on logo size.</p>
+
+<div class="snippetcpt-wrap" id="snippet-2755" data-id="2755" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2755" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_styles/?full-screen=1">
+                <pre class="prettyprint linenums lang-php" title="acme_login_logo_image_styles">&lt;?php
+/**
+ * Custom login form logo image styles.
+ */
+function acme_login_logo_image_styles() { ?&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #login h1 a,
+        .login h1 a {
+                background-size: auto;
+                background-image: none;
+                background-position: center center;
+                text-indent: 0;
+                width: auto;
+                height: auto;
+                max-width: 320px;
+        }
+
+        #login h1 a img,
+        .login h1 a img {
+        max-width: 100%;
+        }
+    &lt;/style&gt;
+&lt;?php }
+add_action( 'login_enqueue_scripts', 'acme_login_logo_image_styles' );</pre>
+            </div>
+
+<h2 class="wp-block-heading">Extending the code to work with the customizer</h2>
+
+<p>Once you have the logo added, your login screen will feel like it&#8217;s starting to take shape, but what about the background color, button colors, and link colors?</p>
+
+<p>That&#8217;s where your Customizer codes come into place!</p>
+
+<figure class="wp-block-image aligncenter"><img loading="lazy" decoding="async" width="700" height="526" src="/images/duh-michelle-tanner.webp" alt="" class="wp-image-2759"/></figure>
+
+<p>In the <a href="https://www.wpdispensary.com/product/cannabiz">CannaBiz theme</a>, I have options for button background and text colors, text link colors, plus the logo image upload. </p>
+
+<p>I&#8217;ll be using these settings to style the login page of my website, which you can see in the updated codes below.</p>
+
+<h3 class="wp-block-heading">Adding a logo image from the customizer</h3>
+
+<p>Below is the updated filter code which replaces the first piece of code we added earlier in the article.</p>
+
+<div class="snippetcpt-wrap" id="snippet-2757" data-id="2757" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2757" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_2/?full-screen=1">
+                <pre class="prettyprint linenums lang-php" title="acme_login_logo_image_2">&lt;?php
+/**
+ * Custom login form logo link title.
+ * 
+ * Requires WordPress v5.2+ in order to use the login_headertext filter
+ */
+function acme_login_logo_image( $login_header_text ) {
+
+    // Get default contents (used if no logo is present in customizer)
+    $login_header_text = $login_header_text;
+
+    // Change the login_header_text to display our new logo.
+    if ( '' != get_theme_mod( 'acme_logo' ) ) {
+        $login_header_text = '';
+        $logo_url          = get_theme_mod( 'acme_logo' );
+        $login_header_text = '&lt;img src=&quot;' . $logo_url . '&quot; alt=&quot;' . get_bloginfo( 'title' ) . '&quot; /&gt;';
+    }
+
+    return $login_header_text;
+
+}
+add_filter( 'login_headertext', 'acme_login_logo_image' );
+</pre>
+            </div>
+
+<p>As you can see in the above code, we&#8217;re using <a href="https://codex.wordpress.org/Function_Reference/get_theme_mod">get_theme_mod</a> and checking to see if the logo file is present.</p>
+
+<p>This way, if no logo is uploaded, none of the code changes will occur, and nothing will be altered on the front-end view.</p>
+
+<p>Next, we&#8217;ll be updating the CSS for the text and button links.</p>
+
+<h3 class="wp-block-heading">Adding text &amp; button link styles from the customizer</h3>
+
+<p>I wanted to utilize the text link colors and button colors I added in the CannaBiz theme so the login page matches the website design even more.</p>
+
+<p>The code below adds in text link colors and will be added along with the CSS we added in the second code example in this article.</p>
+
+<p>You can change the <code>get_theme_mod</code> instances to match your color options names.</p>
+
+<div class="snippetcpt-wrap" id="snippet-2760" data-id="2760" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2760" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_links/?full-screen=1">
+                <pre class="prettyprint linenums lang-css" title="acme_login_logo_image_css_links">body.login a,
+body.login a:visited,
+body.login a:focus,
+body.login a:active,
+body.login #backtoblog a,
+body.login #nav a {
+    color: &lt;?php echo get_theme_mod( 'acme_link_color' ); ?&gt;;
+}
+
+body.login #backtoblog a:hover,
+body.login #nav a:hover,
+body.login h1 a:hover,
+body.login #backtoblog a:focus,
+body.login #nav a:focus,
+body.login h1 a:focus {
+    color: &lt;?php echo get_theme_mod( 'acme_link_hover_color' ); ?&gt;;
+}
+</pre>
+            </div>
+
+<p>The next step is to update the button on the page to match the colors and style of the buttons added in my theme.</p>
+
+<p>The CSS codes below make the button full width and adds the background color and text colors I have in the theme customizer.</p>
+
+<div class="snippetcpt-wrap" id="snippet-2761" data-id="2761" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2761" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_button_links/?full-screen=1">
+                <pre class="prettyprint linenums lang-css" title="acme_login_logo_image_css_button_links">body.login.wp-core-ui .button-primary {
+    background-color: &lt;?php echo get_theme_mod( 'acme_button_color' ); ?&gt;;
+    border-color: &lt;?php echo get_theme_mod( 'acme_button_color' ); ?&gt;;
+    box-shadow: none;
+    text-shadow: none;
+    color: &lt;?php echo get_theme_mod( 'acme_button_text_color' ); ?&gt;;
+    width: 100%;
+    margin-top: 16px;
+    padding: 6px 12px 6px 12px;
+    height: auto;
+    font-size: 16px;
+}
+body.login.wp-core-ui .button-primary:hover {
+    background-color: &lt;?php echo get_theme_mod( 'acme_button_hover_color' ); ?&gt;;
+    border-color: &lt;?php echo get_theme_mod( 'acme_button_hover_color' ); ?&gt;;
+    box-shadow: none;
+    text-shadow: none;
+    color: &lt;?php echo get_theme_mod( 'acme_button_hover_text_color' ); ?&gt;;
+}</pre>
+            </div>
+
+<h3 class="wp-block-heading">Changing the login screen background color</h3>
+
+<p>The last step to making the login screen really feel like a part of your website brand is to change the background color to match your website.</p>
+
+<p>The code below uses the background color option added to the theme customizer.</p>
+
+<div class="snippetcpt-wrap" id="snippet-2762" data-id="2762" data-edit="" data-copy="/wp-json/wp/v2/posts?per_page=100&#038;page=1&#038;_embed&#038;snippet=50a73bb254&#038;id=2762" data-fullscreen="https://robertdevore.com/code-snippets/acme_login_logo_image_css_background/?full-screen=1">
+                <pre class="prettyprint linenums lang-css" title="acme_login_logo_image_css_background">body.login {
+    background-color: #&lt;?php echo get_theme_mod( 'background_color' ); ?&gt;;
+}
+</pre>
+            </div>
+
+<h2 class="wp-block-heading">See the code in action</h2>
+
+<p>Check out the WP Dispensary demo server&#8217;s <a href="https://www.wpdispensary.com/demo/wp-login.php">login screen</a> to see the above code&#8217;s being used via the CannaBiz theme&#8217;s styles.</p>
+
+<p>Hopefully this article helped you get a better looking login screen for your website, without the need to use<em> another</em> plugin.</p>
+
+<figure class="wp-block-image aligncenter"><img loading="lazy" decoding="async" width="496" height="367" src="/images/bob-ross-glad-you-could-join-me-today.webp" alt="" class="wp-image-2764"/></figure>
+        </div>
+    </article>
+</main>
+
+
+<footer class="bg-background border-t border-primary mt-10 pt-12 pb-12 text-center text-sm" id="footer">
+    
+        <h4 class="text-yellow-custom text-2xl font-semibold mb-4">Let's Connect</h4>
+        <p>If you have questions or want to discuss custom development work, get in touch.</p>
+        <a href="/contact/" class="mt-6 px-6 py-2 bg-primary text-gray-900 font-semibold rounded-full hover:bg-yellow-500">Get in Touch</a>
+        <p class="mt-6">&copy; 1985-2024 Robert DeVore &middot; Get <a href="https://stattic.site/" target="_blank" class="text-links" aria-label="Stattic - opens in a new tab">Stattic</a> &middot; <a href="https://github.com/robertdevore/" class="text-yellow-custom hover:underline" aria-label="GitHub - opens in a new tab">GitHub</a> &middot; <a href="https://x.com/deviorobert/" class="text-yellow-custom hover:underline" aria-label="Twitter - opens in a new tab">Twitter</a></p>
+    
+    
+</footer>
+
+</body>
+</html>
